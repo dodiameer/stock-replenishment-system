@@ -1,0 +1,991 @@
+Product_ID,Product_Name,Catagory,Supplier_Name,Stock_Quantity,Reorder_Level,Unit_Price,Expiration_Date,Sales_Volume,Max_Capacity
+29-205-1132,Sushi Rice,Grains & Pulses,Jaxnation,22,72,$4.50 ,9/19/2024,32,142
+40-681-9981,Arabica Coffee,Beverages,Feedmix,45,77,$20.00 ,8/5/2024,85,79
+06-955-3428,Black Rice,Grains & Pulses,Vinder,30,38,$6.00 ,9/22/2024,31,121
+71-594-6552,Long Grain Rice,Grains & Pulses,Brightbean,12,59,$1.50 ,4/17/2024,95,121
+57-437-1828,Plum,Fruits & Vegetables,Topicstorm,37,30,$4.00 ,5/10/2024,62,104
+21-120-6238,All-Purpose Flour,Grains & Pulses,Dabjam,55,33,$1.75 ,5/9/2024,34,47
+71-516-1996,Corn Oil,Oils & Fats,Tagfeed,96,52,$2.50 ,6/20/2024,67,68
+39-629-5554,Egg (Goose),Dairy,Muxo,44,90,$2.50 ,5/2/2025,21,107
+66-268-8345,Greek Yogurt,Dairy,Thoughtstorm,91,84,$3.00 ,8/1/2025,56,95
+46-452-9419,Egg (Duck),Dairy,Wordify,43,10,$1.00 ,8/7/2024,27,25
+51-469-4611,Long Grain Rice,Grains & Pulses,Fivebridge,62,81,$1.60 ,7/1/2025,100,172
+42-220-9305,White Sugar,Grains & Pulses,Zooxo,91,98,$2.00 ,10/14/2024,100,104
+75-094-1179,Rye Bread,Bakery,Vitz,26,79,$3.00 ,7/18/2024,47,110
+11-073-0189,Plum,Fruits & Vegetables,Voomm,95,50,$4.00 ,6/5/2024,69,126
+22-621-2774,Strawberries,Fruits & Vegetables,Babblestorm,54,26,$6.00 ,6/14/2024,63,42
+39-449-0772,Feta Cheese,Dairy,Youfeed,94,13,$7.00 ,5/10/2024,20,28
+55-936-2406,Bread Flour,Grains & Pulses,Mynte,27,93,$1.50 ,5/4/2024,66,181
+82-041-7211,Swiss Cheese,Dairy,Reallinks,49,49,$8.00 ,1/7/2024,78,75
+48-414-6162,Arabica Coffee,Beverages,Skivee,55,93,$20.00 ,5/5/2024,46,177
+76-854-0095,White Sugar,Grains & Pulses,Mydeo,65,61,$2.00 ,12/28/2024,29,143
+25-349-7974,Spinach,Fruits & Vegetables,Devshare,72,70,$2.50 ,6/22/2024,82,169
+66-627-9752,Trout,Seafood,Jabbertype,49,73,$12.00 ,3/9/2024,52,121
+78-614-4402,Green Beans,Fruits & Vegetables,Gigazoom,81,99,$2.00 ,4/25/2024,20,127
+67-025-1245,Cabbage,Fruits & Vegetables,Chatterbridge,88,46,$1.00 ,12/8/2024,73,101
+68-418-6724,Parmesan Cheese,Dairy,Feedspan,63,4,$12.00 ,9/30/2024,59,89
+40-795-0753,Raw Sugar,Grains & Pulses,Mydo,31,43,$1.50 ,5/30/2024,46,123
+02-508-3777,Egg (Quail),Dairy,Realpoint,97,88,$0.80 ,6/26/2024,97,169
+79-741-0770,Mushrooms,Fruits & Vegetables,Photospace,72,87,$6.00 ,3/17/2024,94,126
+31-211-5803,Oatmeal Biscuit,Bakery,Gigazoom,16,9,$5.00 ,7/2/2025,50,41
+16-499-5059,Pear,Fruits & Vegetables,Centizu,77,20,$4.50 ,12/20/2024,61,25
+76-340-4432,Cucumber,Fruits & Vegetables,Brainverse,19,36,$1.75 ,6/3/2024,31,108
+38-732-7667,Pineapple,Fruits & Vegetables,Photojam,18,52,$3.50 ,9/28/2024,42,74
+04-240-2226,Olive Oil,Oils & Fats,Kamba,47,48,$6.00 ,5/3/2024,42,121
+79-136-9840,Herbal Tea,Beverages,Pixonyx,77,45,$30.00 ,6/23/2024,25,120
+73-401-5721,Haddock,Seafood,Midel,46,28,$9.00 ,12/26/2024,65,101
+91-848-0606,Onion,Fruits & Vegetables,Skyble,39,22,$2.00 ,10/28/2024,60,95
+54-109-8062,Sushi Rice,Grains & Pulses,Linklinks,75,69,$4.50 ,2/16/2025,43,169
+70-612-2531,Pineapple,Fruits & Vegetables,Flipbug,48,48,$3.45 ,10/30/2024,51,87
+26-161-6692,Zucchini,Fruits & Vegetables,Kare,61,90,$2.50 ,9/19/2024,79,116
+43-893-5408,Short Grain Rice,Grains & Pulses,Snaptags,60,90,$3.00 ,8/24/2024,47,175
+11-316-8405,Mango,Fruits & Vegetables,Twitternation,24,55,$5.00 ,11/25/2024,39,106
+34-086-3222,Lemon,Fruits & Vegetables,Layo,12,7,$2.30 ,5/6/2024,66,55
+21-816-1004,Black Coffee,Beverages,Realpoint,84,13,$15.00 ,7/22/2024,25,101
+43-693-2092,Butter,Dairy,Kayveo,51,100,$3.00 ,9/22/2024,40,170
+63-270-7076,Multigrain Bread,Bakery,Roombo,65,36,$3.50 ,1/24/2025,32,73
+90-230-9767,Long Grain Rice,Grains & Pulses,Voonyx,67,88,$1.50 ,11/17/2024,66,120
+05-334-2923,Bread Flour,Grains & Pulses,Browsezoom,14,74,$1.50 ,5/16/2024,37,145
+52-481-5224,Kiwi,Fruits & Vegetables,Fiveclub,45,24,$6.00 ,2/15/2025,44,85
+11-325-7396,Mango,Fruits & Vegetables,Skipfire,92,46,$5.00 ,3/26/2024,24,59
+70-854-6891,Sourdough Bread,Bakery,Flashspan,41,84,$4.00 ,12/11/2024,42,174
+46-520-1819,Short Grain Rice,Grains & Pulses,Katz,41,36,$4.50 ,5/15/2024,38,114
+91-105-7317,Orange,Fruits & Vegetables,Devshare,85,45,$3.00 ,2/2/2025,95,116
+40-751-8635,Pineapple,Fruits & Vegetables,Yamia,44,80,$3.40 ,5/3/2024,96,164
+02-920-4829,White Bread,Bakery,Skyble,92,87,$2.50 ,5/22/2024,61,171
+36-918-2937,Green Coffee,Beverages,Kwinu,62,89,$12.00 ,11/28/2024,35,107
+68-761-6907,Zucchini,Fruits & Vegetables,Brainverse,26,18,$2.50 ,2/2/2025,57,80
+69-468-5468,Sourdough Bread,Bakery,Vinte,59,78,$4.50 ,11/26/2024,32,84
+27-635-8394,Orange,Fruits & Vegetables,Twitterwire,88,37,$2.90 ,3/19/2024,63,98
+41-729-5410,Sardines,Seafood,Ntag,91,59,$6.00 ,6/26/2024,30,108
+33-335-9140,Olive Oil,Oils & Fats,Blogspan,28,17,$6.00 ,8/27/2024,38,45
+11-581-9869,Carrot,Fruits & Vegetables,Avaveo,51,60,$1.50 ,9/26/2024,44,158
+78-237-0277,Black Tea,Beverages,Brainbox,46,27,$5.00 ,1/13/2025,64,103
+75-152-8731,Pear,Fruits & Vegetables,Voonix,82,65,$4.45 ,8/8/2024,30,134
+65-718-0492,Olive Oil,Oils & Fats,Midel,100,92,$6.00 ,2/16/2025,84,118
+55-697-5242,Ricotta Cheese,Dairy,Shufflebeat,51,53,$6.00 ,9/24/2024,54,141
+14-844-4138,Black Coffee,Beverages,Flipbug,61,43,$15.00 ,3/3/2024,67,72
+20-225-3930,White Tea,Beverages,Skipstorm,99,87,$25.00 ,3/17/2024,93,97
+66-993-4234,Cucumber,Fruits & Vegetables,Gigazoom,13,60,$1.80 ,6/24/2024,44,160
+87-762-1317,Mozzarella Cheese,Dairy,Dazzlesphere,45,63,$7.00 ,9/2/2025,83,138
+81-844-2979,Broccoli,Fruits & Vegetables,Realblab,73,87,$4.00 ,11/5/2024,47,133
+44-408-7594,Eggplant,Fruits & Vegetables,Eire,39,21,$3.00 ,8/1/2025,51,26
+26-010-9519,Trout,Seafood,Blogtag,29,72,$12.00 ,9/1/2025,85,168
+65-464-5070,Heavy Cream,Dairy,Ntags,12,60,$4.00 ,1/9/2024,20,133
+07-970-9352,Bell Pepper,Fruits & Vegetables,Tagtune,96,33,$4.45 ,12/7/2024,74,105
+88-746-9468,Onion,Fruits & Vegetables,Skiba,35,92,$2.00 ,11/14/2024,76,166
+06-336-5482,Sardines,Seafood,Voolia,89,34,$6.00 ,8/24/2024,60,49
+03-276-3931,Mango,Fruits & Vegetables,Oyoloo,60,36,$4.50 ,12/20/2024,26,64
+39-232-5341,Arborio Rice,Grains & Pulses,Feedmix,20,34,$4.50 ,2/15/2025,50,108
+12-239-9399,Potato,Fruits & Vegetables,Tagtune,28,40,$1.20 ,10/27/2024,30,67
+75-080-4909,Corn Oil,Oils & Fats,Tagopia,20,55,$2.50 ,9/9/2024,86,70
+70-815-4015,Butter Biscuit,Bakery,Ozu,38,93,$6.00 ,8/30/2024,67,154
+11-032-9778,Peas,Fruits & Vegetables,Edgepulse,99,1,$3.00 ,8/19/2024,50,5
+54-374-9986,Cream,Dairy,Oyondu,92,52,$2.50 ,3/21/2024,72,132
+77-312-6317,Spinach,Fruits & Vegetables,Abatz,41,29,$2.40 ,1/10/2024,59,105
+13-844-2178,Sardines,Seafood,Browsetype,44,67,$6.00 ,3/24/2024,90,115
+22-141-9798,White Sugar,Grains & Pulses,Photobean,47,7,$2.00 ,4/30/2024,29,70
+20-022-3173,Bread Flour,Grains & Pulses,Mydeo,21,63,$1.50 ,2/22/2025,38,128
+26-177-5690,Cucumber,Fruits & Vegetables,Skinte,85,33,$1.80 ,1/21/2025,64,83
+70-871-4536,Swiss Cheese,Dairy,Cogilith,29,4,$8.00 ,6/17/2024,59,21
+06-611-5454,Peanut Oil,Oils & Fats,Bluezoom,64,21,$4.00 ,11/16/2024,51,34
+89-543-3456,Blueberries,Fruits & Vegetables,Jaloo,66,40,$10.00 ,6/2/2025,24,136
+82-395-5070,Chocolate Biscuit,Bakery,Vidoo,75,81,$5.00 ,2/20/2025,69,98
+14-305-5348,Cheese,Dairy,Shuffledrive,53,63,$9.00 ,3/20/2024,56,65
+82-243-3180,Palm Oil,Oils & Fats,Zooxo,43,63,$1.80 ,11/2/2025,33,143
+25-010-9478,Eggplant,Fruits & Vegetables,Topicblab,74,30,$3.00 ,7/31/2024,82,54
+13-202-4809,Garlic,Fruits & Vegetables,Katz,27,22,$7.00 ,5/20/2024,91,111
+67-270-7464,Jasmine Rice,Grains & Pulses,Yadel,91,73,$4.75 ,7/12/2024,51,150
+11-733-1756,Rice Flour,Grains & Pulses,Mynte,52,81,$2.00 ,2/24/2025,95,134
+80-988-4653,Zucchini,Fruits & Vegetables,Livetube,43,66,$2.50 ,4/19/2024,66,151
+60-343-7973,Multigrain Bread,Bakery,Zoombox,56,86,$3.20 ,9/4/2024,67,109
+34-861-4446,Ricotta Cheese,Dairy,Photobug,66,40,$6.00 ,6/1/2025,43,48
+67-710-5120,Bread Flour,Grains & Pulses,Skynoodle,84,92,$1.50 ,2/25/2024,92,110
+49-891-4927,Cottage Cheese,Dairy,Midel,37,5,$5.00 ,11/28/2024,68,6
+55-522-8242,Whipped Cream,Dairy,Feedbug,29,36,$4.00 ,7/9/2024,60,76
+62-509-0666,Almond Flour,Grains & Pulses,Brainverse,13,88,$9.50 ,3/7/2024,24,95
+64-478-4745,Lemon,Fruits & Vegetables,Mydo,63,81,$2.50 ,11/19/2024,56,175
+35-835-5591,Tilapia,Seafood,Fiveclub,95,63,$7.00 ,8/3/2024,61,136
+26-690-3784,Lettuce,Fruits & Vegetables,Fadeo,58,5,$2.00 ,6/4/2024,53,6
+67-546-1568,Peanut Oil,Oils & Fats,Edgeify,57,36,$4.00 ,3/28/2024,56,89
+67-625-9704,Sardines,Seafood,Eayo,33,18,$6.00 ,7/18/2024,98,110
+31-969-4614,Arabica Coffee,Beverages,Voomm,62,89,$20.00 ,1/15/2025,23,95
+50-364-5828,Coconut,Fruits & Vegetables,Mydo,89,57,$5.00 ,12/23/2024,38,149
+61-827-4098,Cod,Seafood,Devbug,23,42,$8.00 ,3/24/2024,63,129
+87-698-0944,Banana,Fruits & Vegetables,Vinder,56,12,$98.43 ,2/2/2025,35,71
+36-636-4873,Black Rice,Grains & Pulses,Wikivu,86,100,$6.10 ,5/30/2024,80,174
+98-556-5323,Pomegranate,Fruits & Vegetables,Dynabox,60,61,$6.00 ,8/27/2024,96,63
+97-772-2336,Pineapple,Fruits & Vegetables,Rooxo,70,30,$3.50 ,7/14/2024,44,99
+19-047-4239,Peach,Fruits & Vegetables,Quire,47,72,$4.00 ,4/30/2024,93,145
+41-316-8427,Arborio Rice,Grains & Pulses,Realcube,95,93,$4.50 ,9/21/2024,60,109
+15-907-3681,Plum,Fruits & Vegetables,Brainsphere,20,42,$3.85 ,2/20/2025,61,63
+14-305-9690,Sushi Rice,Grains & Pulses,Dabshots,19,17,$4.30 ,10/3/2024,58,31
+40-860-4532,Arabica Coffee,Beverages,Yadel,74,72,$21.00 ,5/2/2025,83,90
+44-552-3909,Pear,Fruits & Vegetables,Riffwire,61,50,$4.50 ,1/19/2025,24,59
+75-029-9003,Sourdough Bread,Bakery,Eadel,34,42,$4.00 ,1/4/2024,28,128
+74-587-2065,Pear,Fruits & Vegetables,Gigaclub,29,20,$4.50 ,2/3/2024,31,105
+70-149-6756,Heavy Cream,Dairy,Skynoodle,14,99,$4.20 ,6/26/2024,28,196
+29-896-7926,White Rice,Grains & Pulses,Centidel,20,20,$1.80 ,6/5/2024,62,76
+54-822-9009,Cauliflower,Grains & Pulses,Shufflester,40,38,$3.20 ,3/1/2025,21,70
+84-075-7647,Canola Oil,Oils & Fats,Mydeo,91,82,$2.30 ,2/22/2025,43,140
+88-602-8210,Avocado Oil,Oils & Fats,Skajo,99,96,$10.00 ,9/28/2024,94,135
+04-542-3863,Bread Flour,Grains & Pulses,Eidel,34,46,$1.50 ,12/22/2024,49,91
+57-613-5779,Gouda Cheese,Dairy,Thoughtblab,100,21,$7.00 ,8/29/2024,20,85
+90-737-0044,Black Rice,Grains & Pulses,Bubblemix,79,98,$6.00 ,5/17/2024,26,195
+28-956-1320,Greek Yogurt,Dairy,Thoughtblab,62,2,$3.00 ,5/9/2024,50,100
+87-791-5803,Tuna,Seafood,Meemm,25,44,$18.00 ,1/9/2024,36,140
+14-521-4167,Buttermilk,Dairy,Vinder,47,2,$2.50 ,6/3/2024,48,78
+51-572-5497,Orange,Fruits & Vegetables,Kanoodle,15,44,$3.00 ,4/28/2024,56,132
+28-840-6096,Pomegranate,Fruits & Vegetables,Flipopia,19,65,$6.00 ,12/9/2024,59,113
+44-538-3366,Tuna,Seafood,Realbridge,58,77,$18.00 ,3/30/2024,25,173
+51-459-5630,Sour Cream,Dairy,Skyvu,11,30,$4.00 ,12/14/2024,84,34
+02-655-3240,Rice Flour,Grains & Pulses,Jabberstorm,99,44,$2.00 ,6/20/2024,36,96
+42-887-6557,Long Grain Rice,Grains & Pulses,Geba,26,82,$1.50 ,3/30/2024,76,101
+96-316-7600,Bell Pepper,Fruits & Vegetables,Linklinks,70,31,$4.50 ,7/7/2024,23,86
+58-063-8633,Bell Pepper,Fruits & Vegetables,Skimia,50,3,$4.50 ,9/22/2024,69,91
+43-703-9939,Pineapple,Fruits & Vegetables,Bubblemix,55,91,$3.50 ,2/17/2025,81,126
+88-069-5486,Cod,Seafood,Buzzshare,31,87,$8.00 ,1/5/2024,41,106
+74-845-3299,Green Tea,Beverages,Oyoyo,63,92,$8.00 ,4/29/2024,93,118
+81-605-6246,Sardines,Seafood,Shufflester,73,31,$6.00 ,6/3/2024,22,80
+73-561-2867,Sourdough Bread,Bakery,Eayo,12,86,$4.00 ,9/29/2024,75,184
+19-967-0632,Short Grain Rice,Grains & Pulses,Yombu,53,86,$3.00 ,6/11/2024,44,140
+23-070-2433,Powdered Sugar,Grains & Pulses,Meeveo,68,7,$2.50 ,12/28/2024,69,44
+27-262-2437,Swiss Cheese,Dairy,Skidoo,80,9,$8.10 ,9/10/2024,54,38
+39-479-5147,Tuna,Seafood,Meedoo,92,68,$18.00 ,4/4/2024,40,147
+71-085-4290,Cucumber,Fruits & Vegetables,Eire,31,98,$1.80 ,4/12/2024,91,170
+48-957-6116,Eggplant,Fruits & Vegetables,Topicstorm,31,44,$3.00 ,5/8/2024,46,53
+83-917-7384,Garlic,Fruits & Vegetables,Tavu,76,97,$7.00 ,11/5/2024,52,117
+26-031-8070,Vegetable Oil,Oils & Fats,Trudeo,57,99,$2.00 ,4/19/2024,89,122
+03-149-9760,Whipped Cream,Dairy,Yotz,92,99,$4.00 ,3/26/2024,43,192
+53-680-5293,Cheddar Cheese,Dairy,Demizz,88,74,$9.00 ,8/24/2024,79,171
+49-861-7823,Coconut,Fruits & Vegetables,Skippad,99,8,$5.00 ,10/8/2024,41,35
+24-364-3341,Egg (Turkey),Dairy,Topiclounge,44,84,$2.50 ,9/25/2024,51,147
+80-374-5711,Herbal Tea,Beverages,Browsecat,48,77,$31.00 ,7/12/2024,70,158
+76-325-9093,Sesame Oil,Oils & Fats,Feedbug,27,92,$6.50 ,12/18/2024,29,148
+30-429-2162,Black Rice,Grains & Pulses,Npath,34,96,$6.15 ,1/15/2025,90,172
+53-446-8243,Orange,Fruits & Vegetables,Skipfire,41,94,$3.00 ,4/23/2024,88,98
+67-473-7093,Black Tea,Beverages,Topicstorm,56,12,$5.00 ,4/19/2024,52,97
+98-235-2711,Asparagus,Fruits & Vegetables,Devpoint,22,40,$5.00 ,1/26/2025,98,47
+07-219-8017,Palm Oil,Oils & Fats,Skibox,40,2,$1.80 ,8/11/2024,71,60
+97-040-3822,Swiss Cheese,Dairy,Gevee,50,99,$8.00 ,5/17/2024,42,172
+10-002-6494,Mango,Fruits & Vegetables,Meevee,89,92,$4.80 ,11/11/2024,46,154
+12-998-3882,Egg (Turkey),Dairy,Bluezoom,76,54,$2.50 ,5/26/2024,69,130
+31-746-4951,Whole Wheat Flour,Grains & Pulses,Gigaclub,67,60,$2.75 ,6/9/2024,30,81
+87-097-5691,Robusta Coffee,Beverages,Photofeed,62,78,$10.00 ,3/26/2024,62,175
+34-075-0371,Watermelon,Fruits & Vegetables,Latz,75,10,$3.00 ,3/12/2024,90,78
+40-810-9261,Green Coffee,Beverages,Cogibox,75,47,$12.50 ,5/23/2024,33,80
+46-931-6897,Cream,Dairy,Meevee,29,32,$2.50 ,9/15/2024,64,58
+58-182-6781,Oatmeal Biscuit,Bakery,Pixope,34,55,$5.00 ,11/15/2024,77,77
+06-706-6490,Green Tea,Beverages,Tanoodle,15,66,$8.00 ,3/15/2024,60,151
+47-578-4161,Anchovies,Seafood,Jaxspan,88,56,$10.00 ,9/14/2024,98,137
+18-199-5799,Cheddar Cheese,Dairy,Jayo,40,81,$9.00 ,10/30/2024,40,121
+00-357-2313,Avocado Oil,Oils & Fats,Quamba,10,86,$10.00 ,12/13/2024,24,109
+83-704-6367,Arabica Coffee,Beverages,Feedmix,21,87,$21.00 ,7/9/2024,20,99
+01-144-5960,Trout,Seafood,Zazio,75,25,$12.00 ,7/13/2024,89,124
+96-774-0457,Cod,Seafood,Izio,56,50,$8.00 ,10/22/2024,99,130
+24-310-9184,Rye Bread,Bakery,Brainlounge,69,65,$3.00 ,8/4/2024,98,156
+10-255-8579,Basmati Rice,Grains & Pulses,Trilia,56,53,$4.50 ,1/28/2025,69,130
+38-417-4656,White Sugar,Grains & Pulses,Dazzlesphere,24,69,$2.00 ,12/23/2024,20,71
+53-080-8252,Sourdough Bread,Bakery,Thoughtstorm,30,85,$4.50 ,11/20/2024,32,106
+14-681-7035,White Tea,Beverages,Voolith,36,90,$25.00 ,5/18/2024,35,147
+96-503-7712,White Bread,Bakery,Twitterbridge,93,76,$2.50 ,1/19/2025,76,158
+98-064-4465,Mozzarella Cheese,Dairy,Feedfire,96,38,$7.00 ,11/11/2024,72,55
+84-198-7276,Peanut Oil,Oils & Fats,Eidel,60,88,$4.00 ,6/15/2024,94,153
+18-278-2383,Gouda Cheese,Dairy,Skimia,97,77,$7.00 ,2/7/2024,43,90
+20-054-3716,Chocolate Biscuit,Bakery,JumpXS,11,6,$5.00 ,2/25/2024,88,106
+63-822-5278,Pomegranate,Fruits & Vegetables,Kamba,14,66,$6.00 ,2/27/2024,86,67
+01-439-6231,Sunflower Oil,Oils & Fats,Skidoo,88,100,$2.50 ,9/12/2024,25,117
+06-690-2335,Jasmine Rice,Grains & Pulses,Jabbertype,24,15,$4.75 ,7/5/2024,35,21
+47-554-5780,Haddock,Seafood,Babbleopia,93,62,$9.00 ,4/17/2024,78,127
+70-587-1204,Black Rice,Grains & Pulses,Reallinks,68,68,$6.00 ,6/23/2024,37,165
+97-710-2449,Rye Bread,Bakery,Tanoodle,28,94,$2.80 ,6/19/2024,31,174
+51-462-0747,Lime,Fruits & Vegetables,Vinder,21,30,$2.00 ,10/3/2024,43,62
+90-492-0564,Pomegranate,Fruits & Vegetables,Shuffledrive,92,96,$6.00 ,7/20/2024,32,152
+63-956-0739,Robusta Coffee,Beverages,Jetwire,68,12,$10.00 ,12/22/2024,39,54
+30-832-5429,Multigrain Bread,Bakery,Topicshots,46,43,$3.50 ,9/17/2024,68,89
+38-822-8005,Cucumber,Fruits & Vegetables,Innojam,47,20,$1.75 ,3/31/2024,49,85
+73-118-1117,Olive Oil,Oils & Fats,Layo,52,88,$6.00 ,11/13/2024,100,143
+60-285-3783,Mushrooms,Fruits & Vegetables,Youfeed,51,62,$6.00 ,1/15/2025,52,157
+00-215-7434,Egg (Goose),Dairy,Quatz,14,63,$2.50 ,11/28/2024,59,137
+68-734-1585,Greek Yogurt,Fruits & Vegetables,Meeveo,62,44,$51.17 ,7/13/2024,92,55
+08-703-1382,Peach,Fruits & Vegetables,Wikizz,40,53,$4.00 ,6/21/2024,70,60
+65-282-0419,White Tea,Beverages,Feedbug,50,100,$25.50 ,5/12/2024,29,191
+62-777-6010,Sushi Rice,Grains & Pulses,Katz,77,20,$4.25 ,5/11/2024,42,57
+87-675-1506,Strawberries,Fruits & Vegetables,Skalith,31,89,$5.90 ,5/21/2024,46,96
+67-027-7269,Mushrooms,Fruits & Vegetables,Twitterbeat,35,19,$6.50 ,9/11/2024,88,49
+72-066-4597,Broccoli,Fruits & Vegetables,Zoovu,31,54,$4.00 ,12/13/2024,69,106
+31-627-6025,White Bread,Bakery,Ozu,56,62,$2.50 ,1/20/2025,56,126
+09-286-8107,Greek Yogurt,Dairy,Skyndu,90,62,$3.00 ,12/15/2024,70,116
+77-013-1553,Canola Oil,Oils & Fats,Yodo,79,31,$2.30 ,8/20/2024,92,97
+15-762-1058,Lime,Fruits & Vegetables,Tazz,29,83,$2.00 ,4/1/2025,81,174
+48-193-1199,Canola Oil,Oils & Fats,Omba,46,51,$2.30 ,9/6/2024,47,143
+01-173-0029,Blueberries,Fruits & Vegetables,DabZ,42,4,$10.00 ,12/4/2024,37,57
+79-400-6216,Mozzarella Cheese,Dairy,Devpoint,16,56,$7.20 ,2/10/2024,56,69
+80-072-8774,Tuna,Seafood,Viva,89,95,$18.00 ,10/15/2024,76,136
+78-689-8958,White Tea,Beverages,Chatterbridge,20,43,$25.00 ,3/29/2024,73,86
+57-562-2358,Black Coffee,Beverages,Quamba,37,94,$15.00 ,4/2/2025,94,170
+56-191-6497,Bread Flour,Grains & Pulses,Bubblebox,97,41,$1.50 ,7/1/2025,35,109
+46-753-8430,Feta Cheese,Dairy,Rhynyx,98,77,$7.00 ,5/8/2024,92,84
+48-461-3742,Kiwi,Fruits & Vegetables,Zooveo,37,8,$6.00 ,1/23/2025,47,58
+16-354-8122,Digestive Biscuit,Bakery,BlogXS,97,99,$4.00 ,11/27/2024,57,195
+76-954-1442,Arabica Coffee,Beverages,Mynte,97,77,$20.00 ,3/18/2024,74,176
+44-476-0390,Lemon,Fruits & Vegetables,Flashspan,90,92,$2.50 ,3/14/2024,71,148
+35-617-3857,Arabica Coffee,Beverages,Youspan,46,31,$20.00 ,6/3/2024,59,120
+94-029-2717,Broccoli,Fruits & Vegetables,Jetpulse,40,8,$4.00 ,9/6/2024,86,106
+49-526-7806,Kale,Fruits & Vegetables,Yodoo,77,52,$4.00 ,1/5/2024,48,80
+99-137-1730,Bread Flour,Grains & Pulses,Skyndu,62,79,$1.50 ,10/18/2024,32,102
+27-442-3654,Herbal Tea,Beverages,Yoveo,59,17,$30.00 ,3/12/2024,69,18
+32-933-0329,Blueberries,Fruits & Vegetables,Linklinks,23,38,$10.00 ,4/15/2024,40,92
+93-813-2419,Digestive Biscuit,Bakery,Dynabox,39,16,$4.00 ,6/22/2024,98,73
+85-440-3667,Gouda Cheese,Dairy,Kamba,68,29,$7.00 ,9/9/2024,53,60
+77-224-2227,Almond Flour,Grains & Pulses,Eimbee,75,46,$9.50 ,10/26/2024,43,121
+60-632-8752,Chocolate Biscuit,Bakery,Trunyx,96,16,$5.00 ,1/26/2025,45,64
+99-561-4871,Haddock,Seafood,Buzzdog,17,38,$9.00 ,7/28/2024,100,131
+61-607-7622,Egg (Duck),Dairy,Zoonoodle,23,38,$1.00 ,1/15/2025,84,63
+11-745-3025,Peach,Fruits & Vegetables,Oyoloo,15,27,$4.00 ,3/9/2024,37,48
+56-810-0550,Mackerel,Seafood,Janyx,71,7,$7.50 ,4/9/2024,52,13
+59-075-2457,Egg (Goose),Dairy,Dynava,97,26,$2.50 ,10/11/2024,33,41
+40-021-2400,Zucchini,Fruits & Vegetables,Katz,29,18,$2.50 ,11/5/2024,53,104
+29-017-6255,Bell Pepper,Fruits & Vegetables,Eimbee,46,64,$4.60 ,1/31/2025,96,81
+92-291-7089,Cheese,Dairy,Jaxspan,76,15,$9.50 ,6/5/2024,60,114
+69-287-9113,Zucchini,Fruits & Vegetables,Jaxspan,59,91,$2.50 ,12/16/2024,54,115
+76-540-6407,Orange,Fruits & Vegetables,Demimbu,92,54,$3.10 ,12/13/2024,79,127
+85-561-4694,Kiwi,Fruits & Vegetables,Tazz,28,27,$6.00 ,11/5/2024,70,49
+34-928-2775,Coconut,Fruits & Vegetables,Browseblab,19,47,$5.00 ,1/28/2025,96,72
+90-773-9557,Butter,Dairy,Npath,85,28,$3.00 ,12/6/2024,45,49
+57-394-1587,Bread Flour,Grains & Pulses,Roomm,57,63,$1.50 ,10/30/2024,53,104
+28-008-2951,Broccoli,Fruits & Vegetables,Buzzster,95,29,$4.00 ,5/20/2024,52,57
+74-711-7160,Sushi Rice,Grains & Pulses,Meembee,84,69,$4.50 ,1/6/2024,39,146
+22-895-6595,Rice Flour,Grains & Pulses,Topicblab,31,32,$2.00 ,11/21/2024,38,101
+19-214-5762,Pear,Fruits & Vegetables,Gigashots,41,52,$4.50 ,10/13/2024,57,127
+95-349-0828,Feta Cheese,Dairy,Avaveo,97,57,$7.00 ,6/2/2025,95,141
+00-963-2193,Milk,Dairy,Thoughtsphere,43,88,$1.00 ,12/23/2024,84,121
+76-459-2392,Palm Oil,Oils & Fats,Fivebridge,74,4,$1.80 ,5/24/2024,31,71
+10-034-7654,Bread Flour,Grains & Pulses,Zava,70,96,$1.50 ,5/28/2024,27,188
+24-972-6969,Cheese,Dairy,Twitterbeat,69,53,$9.20 ,6/13/2024,28,85
+94-190-5193,Carrot,Fruits & Vegetables,Quinu,67,68,$1.50 ,9/4/2024,67,118
+92-791-0606,Short Grain Rice,Grains & Pulses,Photobean,18,62,$3.00 ,6/9/2024,61,64
+84-629-1532,Arabica Coffee,Beverages,Chatterpoint,22,89,$21.00 ,7/20/2024,30,114
+68-977-2498,Grapes,Fruits & Vegetables,Skinix,88,99,$5.50 ,7/21/2024,93,140
+91-257-3672,Tilapia,Seafood,InnoZ,78,75,$7.00 ,5/7/2024,63,78
+09-536-2626,Olive Oil,Oils & Fats,Fliptune,83,52,$6.00 ,3/21/2024,47,84
+61-801-8665,Robusta Coffee,Beverages,Demivee,42,88,$10.50 ,6/24/2024,34,105
+38-296-6634,Peas,Fruits & Vegetables,Skipfire,49,46,$3.00 ,10/12/2024,82,54
+30-591-7275,Brown Rice,Grains & Pulses,Oyondu,17,88,$2.50 ,1/18/2025,45,129
+83-763-5038,Buttermilk,Dairy,Jatri,52,64,$2.40 ,10/23/2024,21,118
+37-709-3532,Mushrooms,Fruits & Vegetables,Demivee,79,45,$6.00 ,11/5/2024,55,84
+62-795-7801,Palm Oil,Oils & Fats,Buzzshare,35,41,$1.80 ,11/23/2024,62,125
+98-575-4736,Cucumber,Fruits & Vegetables,Flashset,76,11,$1.80 ,9/17/2024,22,26
+57-861-4379,Swiss Cheese,Dairy,Feedmix,93,8,$8.00 ,4/2/2025,93,59
+00-119-8780,Halibut,Seafood,Jaxspan,40,81,$20.00 ,4/3/2024,39,159
+28-824-9017,Trout,Seafood,Flipbug,19,94,$11.50 ,6/14/2024,96,111
+56-668-5370,Vegetable Oil,Oils & Fats,Vimbo,70,96,$2.00 ,3/8/2024,100,117
+29-756-7042,Digestive Biscuit,Bakery,Dabvine,90,52,$4.00 ,7/5/2024,63,102
+41-538-3129,Digestive Biscuit,Bakery,Devshare,77,79,$4.00 ,7/31/2024,62,144
+16-380-0753,Apricot,Fruits & Vegetables,Quinu,38,22,$5.00 ,8/5/2024,33,93
+26-535-4727,Tilapia,Seafood,Jamia,93,25,$7.00 ,4/29/2024,72,48
+59-857-6577,Evaporated Milk,Dairy,Blognation,23,100,$2.00 ,4/3/2024,63,177
+14-550-2152,Green Tea,Beverages,Livepath,51,1,$7.60 ,11/17/2024,96,62
+39-315-3936,Heavy Cream,Dairy,Yata,57,62,$4.00 ,10/8/2024,23,134
+87-199-2743,Papaya,Fruits & Vegetables,Demivee,59,74,$4.50 ,12/11/2024,63,174
+60-771-0879,Blueberries,Fruits & Vegetables,Kayveo,89,15,$10.00 ,3/5/2024,79,37
+00-440-9568,Blueberries,Fruits & Vegetables,Kamba,53,98,$10.00 ,12/20/2024,55,123
+07-074-1196,Plum,Fruits & Vegetables,Skajo,11,56,$3.90 ,10/10/2024,40,118
+69-674-5387,Yogurt,Dairy,Miboo,59,27,$1.75 ,1/2/2025,92,90
+08-940-8578,Onion,Fruits & Vegetables,Oba,34,29,$2.00 ,11/22/2024,90,94
+94-020-6982,Tuna,Seafood,Thoughtstorm,25,75,$18.00 ,4/5/2024,31,102
+42-879-9478,Anchovies,Seafood,Zoonder,81,22,$10.00 ,8/22/2024,95,42
+00-405-7428,Apple,Fruits & Vegetables,Zava,81,74,$3.50 ,12/1/2025,42,119
+87-997-0228,Watermelon,Fruits & Vegetables,Topicblab,71,4,$3.00 ,12/27/2024,81,41
+05-498-7751,Cauliflower,Fruits & Vegetables,Abata,52,22,$2.50 ,3/24/2024,56,59
+55-631-7937,Greek Yogurt,Dairy,Avamba,26,54,$3.00 ,1/21/2025,25,144
+27-389-3529,Haddock,Seafood,Feedfish,84,8,$9.00 ,9/3/2024,60,62
+84-272-0790,Blueberries,Fruits & Vegetables,Eidel,28,86,$10.00 ,7/29/2024,48,130
+01-903-5373,Strawberries,Fruits & Vegetables,Lazz,94,77,$6.00 ,6/21/2024,40,166
+49-311-3063,Kiwi,Fruits & Vegetables,Talane,47,75,$6.00 ,3/7/2024,70,128
+04-277-5245,Coconut Sugar,Grains & Pulses,Bubblebox,20,51,$5.00 ,6/18/2024,71,72
+04-453-5485,Tomato,Fruits & Vegetables,Quatz,84,20,$2.50 ,2/4/2024,86,78
+42-141-5718,Cheese,Dairy,Mydeo,100,31,$9.00 ,12/26/2024,88,74
+89-602-6755,Milk,Dairy,BlogXS,74,90,$1.00 ,7/17/2024,24,116
+15-045-8444,Green Coffee,Beverages,Aibox,27,12,$12.00 ,3/27/2024,88,105
+15-240-6267,Eggplant,Fruits & Vegetables,Mybuzz,91,55,$3.00 ,4/26/2024,42,149
+05-193-8096,Grapes,Fruits & Vegetables,Rhynoodle,82,21,$5.50 ,8/7/2024,39,106
+93-342-8794,Bread Flour,Grains & Pulses,Realblab,84,91,$1.50 ,11/22/2024,83,177
+83-716-2177,Halibut,Seafood,Linktype,18,46,$20.00 ,9/13/2024,57,72
+56-635-6764,Sourdough Bread,Bakery,Avamba,12,59,$4.50 ,5/8/2024,75,121
+10-249-7928,Black Rice,Grains & Pulses,Voomm,85,4,$6.50 ,3/11/2024,95,79
+65-759-3721,Butter Biscuit,Bakery,Vipe,33,60,$6.00 ,12/28/2024,20,127
+08-725-8156,Tilapia,Seafood,Flipopia,59,59,$7.00 ,3/15/2024,57,69
+15-679-3935,Grapes,Fruits & Vegetables,Jabbersphere,22,69,$5.50 ,2/20/2025,34,156
+81-578-7404,Gouda Cheese,Dairy,Rhyloo,67,79,$7.00 ,6/4/2024,73,177
+82-380-5378,Cheese,Dairy,Oozz,78,24,$9.00 ,7/3/2024,60,55
+78-362-8578,Lemon,Fruits & Vegetables,Vimbo,72,32,$2.45 ,10/4/2024,25,112
+32-261-0008,Heavy Cream,Dairy,Oyoyo,63,48,$4.00 ,7/18/2024,21,70
+74-943-9034,White Bread,Bakery,Tagfeed,30,91,$2.50 ,6/5/2024,97,125
+86-330-0214,Arabica Coffee,Beverages,Jayo,36,64,$20.00 ,3/30/2024,91,127
+80-334-0215,Grapes,Fruits & Vegetables,Camimbo,88,27,$5.50 ,6/22/2024,57,119
+48-957-8596,Banana,Fruits & Vegetables,Youfeed,95,25,$53.82 ,10/18/2024,87,116
+37-246-0018,Broccoli,Fruits & Vegetables,Skilith,30,59,$4.00 ,11/4/2024,61,135
+17-002-4721,Green Beans,Fruits & Vegetables,Omba,31,55,$2.00 ,10/29/2024,71,60
+47-802-5023,Cod,Seafood,Buzzster,16,20,$8.00 ,7/6/2024,81,65
+22-319-1377,White Sugar,Grains & Pulses,Skyba,14,16,$2.00 ,6/21/2024,39,109
+57-903-6434,Tomato,Fruits & Vegetables,Shuffledrive,44,67,$2.50 ,3/23/2024,82,82
+22-083-3347,Long Grain Rice,Grains & Pulses,Yodoo,69,82,$1.50 ,4/30/2024,34,140
+65-145-9672,Long Grain Rice,Grains & Pulses,Gigashots,71,10,$1.50 ,5/26/2024,66,59
+95-252-9619,Carrot,Fruits & Vegetables,Skynoodle,92,39,$1.60 ,9/11/2024,30,89
+74-294-3760,Peanut Oil,Oils & Fats,Babblestorm,49,17,$4.00 ,11/27/2024,45,71
+06-797-4963,Pomegranate,Fruits & Vegetables,Innojam,52,8,$6.00 ,8/16/2024,38,45
+39-768-8205,Egg (Turkey),Dairy,Gigabox,56,97,$2.50 ,11/29/2024,82,126
+03-043-9933,Strawberries,Fruits & Vegetables,Yombu,16,23,$6.10 ,8/2/2025,50,99
+29-823-6004,Zucchini,Fruits & Vegetables,Trudeo,52,79,$2.50 ,10/3/2024,36,166
+40-462-2952,Trout,Seafood,Browsezoom,91,68,$11.50 ,11/19/2024,81,148
+71-999-2404,Mango,Fruits & Vegetables,Meezzy,58,58,$4.70 ,1/29/2025,85,86
+03-919-9890,Halibut,Seafood,Wikibox,47,29,$20.00 ,7/25/2024,61,99
+94-525-6925,Rye Bread,Bakery,Kwilith,50,56,$3.00 ,9/17/2024,70,119
+08-213-2058,Sour Cream,Dairy,Babblestorm,43,73,$4.00 ,8/26/2024,59,87
+51-312-8608,Cheddar Cheese,Dairy,Jabbersphere,68,60,$8.90 ,4/29/2024,79,81
+67-512-9754,Egg (Turkey),Dairy,DabZ,19,100,$2.50 ,3/22/2024,66,183
+45-402-0421,Swiss Cheese,Dairy,Quinu,70,84,$8.00 ,7/14/2024,71,156
+85-207-4164,Eggplant,Fruits & Vegetables,Tanoodle,97,20,$3.00 ,10/12/2024,29,92
+72-780-6006,Sunflower Oil,Oils & Fats,Voolith,87,24,$2.50 ,4/17/2024,83,43
+93-166-3169,White Tea,Beverages,Viva,58,81,$25.00 ,2/1/2025,85,147
+21-718-6746,Coconut,Fruits & Vegetables,Eamia,16,53,$5.00 ,6/6/2024,21,65
+93-966-7754,Pineapple,Fruits & Vegetables,Quinu,65,35,$3.50 ,9/27/2024,25,38
+47-663-5703,Basmati Rice,Grains & Pulses,Kanoodle,15,49,$4.50 ,9/14/2024,68,89
+34-110-1040,Bell Pepper,Fruits & Vegetables,Leenti,75,85,$4.50 ,6/24/2024,26,112
+82-342-7339,Vanilla Biscuit,Bakery,Yozio,80,61,$5.50 ,4/3/2024,63,84
+43-670-8544,Orange,Fruits & Vegetables,Camido,84,95,$2.85 ,7/10/2024,48,117
+12-439-8428,Eggplant,Fruits & Vegetables,Ainyx,17,3,$3.00 ,5/31/2024,49,36
+49-919-8798,Evaporated Milk,Dairy,Gigabox,64,31,$1.90 ,10/10/2024,85,122
+73-567-6194,Whipped Cream,Dairy,Yakitri,76,81,$4.00 ,8/9/2024,65,166
+83-573-4586,Sesame Oil,Oils & Fats,Thoughtbeat,77,95,$6.50 ,7/18/2024,29,177
+12-798-9401,Cream,Dairy,Thoughtblab,18,14,$2.50 ,5/25/2024,78,91
+02-895-7781,Coconut Sugar,Grains & Pulses,Tagchat,51,55,$5.00 ,1/24/2025,21,131
+83-625-3618,Asparagus,Fruits & Vegetables,Realmix,68,12,$5.00 ,4/7/2024,84,85
+89-181-4523,Wild Rice,Grains & Pulses,Devbug,46,6,$10.00 ,12/22/2024,63,70
+95-354-8583,Long Grain Rice,Grains & Pulses,Meevee,98,40,$1.50 ,10/20/2024,30,133
+90-303-1821,Onion,Fruits & Vegetables,Edgewire,50,20,$2.00 ,5/10/2024,30,94
+71-631-5875,Salmon,Seafood,Feedfish,88,83,$15.00 ,10/25/2024,61,125
+02-275-6061,Potato,Fruits & Vegetables,Edgewire,26,16,$1.20 ,8/19/2024,64,85
+04-001-1793,Green Coffee,Beverages,Oozz,43,38,$12.00 ,9/4/2024,88,101
+47-749-3277,Powdered Sugar,Grains & Pulses,Devbug,46,20,$2.50 ,9/13/2024,54,50
+37-666-3902,Cauliflower,Fruits & Vegetables,Meevee,19,73,$2.45 ,12/6/2024,70,133
+73-942-0508,Kale,Fruits & Vegetables,Brightbean,61,100,$4.00 ,4/10/2024,76,194
+57-359-3397,Garlic,Fruits & Vegetables,Twiyo,43,40,$7.00 ,12/19/2024,95,70
+46-436-5351,Green Tea,Beverages,Fiveclub,80,54,$8.50 ,4/16/2024,81,75
+27-881-1177,Green Tea,Beverages,Skalith,34,47,$8.00 ,11/23/2024,97,146
+85-237-3505,Green Tea,Beverages,Thoughtsphere,88,50,$8.00 ,3/11/2024,78,138
+80-371-3695,Cottage Cheese,Dairy,Divape,89,42,$5.00 ,10/12/2024,94,118
+04-758-0410,Wild Rice,Grains & Pulses,Wordpedia,26,21,$10.00 ,2/5/2024,40,68
+65-644-1394,Pear,Fruits & Vegetables,Lazz,26,95,$4.50 ,10/2/2025,92,131
+04-293-6969,Peach,Fruits & Vegetables,Linktype,37,38,$4.00 ,8/20/2024,93,62
+40-997-2786,Yogurt,Dairy,Browsecat,76,98,$1.75 ,10/14/2024,62,139
+91-553-1774,Feta Cheese,Dairy,Demivee,80,43,$7.00 ,12/4/2024,64,123
+13-980-8804,Sweet Potato,Fruits & Vegetables,Photospace,100,3,$2.00 ,10/2/2025,98,35
+19-672-8982,Butter,Dairy,Meembee,21,87,$3.10 ,3/31/2024,64,154
+35-299-0889,Coconut Oil,Oils & Fats,Gevee,33,78,$5.00 ,4/21/2024,60,157
+17-022-9721,Apple,Fruits & Vegetables,Chatterpoint,43,63,$3.50 ,12/1/2025,39,162
+22-849-2551,Mushrooms,Fruits & Vegetables,Izio,34,1,$6.20 ,8/9/2024,58,80
+53-050-8242,Mackerel,Seafood,Yodoo,82,25,$7.50 ,2/15/2025,66,119
+88-183-5781,Whole Wheat Bread,Bakery,Lazz,17,63,$3.50 ,12/27/2024,93,66
+09-101-1740,Sushi Rice,Grains & Pulses,Talane,36,81,$4.75 ,8/31/2024,73,135
+98-445-7372,Cod,Seafood,Roombo,65,79,$8.00 ,5/30/2024,56,131
+29-875-6900,Papaya,Fruits & Vegetables,Avaveo,45,28,$4.50 ,8/22/2024,35,34
+27-757-4489,Egg (Goose),Dairy,Abatz,35,78,$2.50 ,4/7/2024,95,146
+51-069-0489,Bread Flour,Grains & Pulses,Oloo,96,83,$1.50 ,5/30/2024,81,133
+20-325-1965,Coconut,Fruits & Vegetables,Katz,56,75,$5.00 ,5/21/2024,42,88
+76-090-4411,Ricotta Cheese,Dairy,Shufflester,49,94,$6.00 ,4/16/2024,38,112
+01-703-8441,Raw Sugar,Grains & Pulses,Cogilith,100,10,$1.50 ,6/21/2024,76,99
+09-622-7119,Haddock,Seafood,Youtags,30,81,$9.00 ,6/15/2024,99,180
+45-172-7012,Papaya,Fruits & Vegetables,Brightbean,20,91,$4.50 ,1/12/2024,35,103
+06-849-4869,Sesame Oil,Oils & Fats,Rhycero,85,15,$6.50 ,7/15/2024,46,31
+30-996-2526,Green Beans,Fruits & Vegetables,Izio,86,90,$2.10 ,7/9/2024,98,129
+71-074-6292,Sourdough Bread,Bakery,Plajo,65,79,$4.00 ,10/17/2024,100,128
+98-909-9395,Cottage Cheese,Dairy,Feedfire,67,98,$5.00 ,7/12/2024,35,190
+61-796-6540,Ricotta Cheese,Dairy,Fliptune,88,4,$6.00 ,8/14/2024,23,83
+41-735-9837,Robusta Coffee,Beverages,Devpulse,14,77,$10.00 ,1/9/2024,32,155
+60-343-3288,Tilapia,Seafood,Vipe,85,92,$6.70 ,3/5/2024,54,158
+27-783-5470,Feta Cheese,Dairy,Thoughtstorm,74,65,$7.00 ,3/16/2024,21,70
+60-456-8169,Cheddar Cheese,Dairy,Oyoba,21,28,$9.00 ,2/25/2024,69,100
+99-420-3592,Butter Biscuit,Bakery,Quatz,22,24,$6.00 ,11/13/2024,47,118
+35-836-6718,Ricotta Cheese,Dairy,Thoughtblab,91,14,$6.00 ,1/22/2025,50,113
+51-273-4240,Multigrain Bread,Bakery,Devpulse,85,57,$3.50 ,6/20/2024,30,82
+38-924-3007,Peas,Fruits & Vegetables,Photolist,12,28,$3.00 ,4/17/2024,46,39
+52-123-8039,Pomegranate,Fruits & Vegetables,Browsebug,43,65,$6.00 ,1/16/2025,78,131
+34-131-8805,Yogurt,Dairy,Eimbee,92,92,$1.75 ,12/22/2024,50,120
+28-505-8317,Watermelon,Fruits & Vegetables,Digitube,23,85,$3.00 ,1/28/2025,92,179
+41-594-5069,Egg (Duck),Dairy,Blogtags,77,1,$1.00 ,3/21/2024,58,42
+94-658-4945,Sweet Potato,Fruits & Vegetables,Skibox,65,10,$2.00 ,8/5/2024,71,91
+69-561-2496,Banana,Fruits & Vegetables,Skinix,82,29,$15.31 ,9/12/2024,77,91
+98-858-6323,Swiss Cheese,Dairy,Janyx,20,17,$8.00 ,11/16/2024,50,88
+92-995-8689,Cheddar Cheese,Dairy,Wordify,31,65,$9.00 ,6/3/2024,63,159
+43-164-5984,Butter,Dairy,Shuffletag,36,75,$2.90 ,11/23/2024,26,110
+58-122-2282,Black Tea,Beverages,Ozu,59,20,$5.00 ,12/6/2024,45,37
+84-269-9130,Long Grain Rice,Grains & Pulses,Flashspan,11,10,$1.50 ,2/8/2024,48,90
+11-922-3342,Black Coffee,Beverages,Gabspot,24,77,$15.50 ,4/3/2024,80,109
+60-550-4771,Haddock,Seafood,Kwimbee,75,80,$9.00 ,8/24/2024,49,167
+88-951-9038,Black Coffee,Beverages,Youfeed,11,72,$15.00 ,11/2/2025,89,77
+08-114-3922,Anchovies,Seafood,Camido,60,64,$10.00 ,2/15/2025,34,100
+70-145-2550,Lemon,Fruits & Vegetables,Yata,91,6,$2.40 ,6/8/2024,38,43
+51-761-6320,Egg (Goose),Dairy,Youopia,43,78,$2.50 ,6/22/2024,48,163
+55-803-3964,Bread Flour,Grains & Pulses,Demizz,25,60,$1.50 ,10/30/2024,31,96
+11-815-7923,Parmesan Cheese,Dairy,Rhyloo,96,9,$11.80 ,6/8/2024,78,66
+83-966-3280,Mackerel,Seafood,Twitterworks,30,29,$7.50 ,9/20/2024,80,99
+29-592-7315,Arborio Rice,Grains & Pulses,Dabtype,56,4,$4.50 ,9/22/2024,61,78
+65-235-7676,Whole Wheat Bread,Bakery,Quire,91,71,$3.50 ,3/6/2024,74,88
+40-683-0283,White Sugar,Grains & Pulses,Topicshots,27,64,$2.00 ,5/23/2024,57,142
+83-553-9523,Buttermilk,Dairy,Zoombox,28,90,$2.45 ,1/28/2025,76,160
+40-793-7235,Sour Cream,Dairy,Chatterbridge,92,67,$4.00 ,5/19/2024,23,118
+74-666-5671,Tuna,Seafood,Youspan,37,33,$18.00 ,4/5/2024,27,113
+90-865-9150,Powdered Sugar,Grains & Pulses,Kazu,28,24,$2.50 ,9/7/2024,82,121
+46-255-3073,Tilapia,Seafood,Vinder,30,42,$7.00 ,11/7/2024,48,50
+11-155-7826,Arabica Coffee,Beverages,Feedfire,98,83,$20.00 ,12/26/2024,39,88
+99-543-5039,Lemon,Fruits & Vegetables,Livetube,65,88,$2.50 ,7/29/2024,89,108
+99-033-5661,Rice Flour,Grains & Pulses,Zava,42,3,$2.00 ,9/25/2024,35,24
+28-608-0039,Lemon,Fruits & Vegetables,Avavee,63,60,$2.50 ,4/15/2024,33,114
+35-529-2933,Broccoli,Fruits & Vegetables,Jabbersphere,85,54,$4.00 ,7/13/2024,85,72
+83-321-7887,Egg (Duck),Dairy,Yombu,44,75,$1.00 ,2/8/2024,96,147
+43-910-2342,Plum,Fruits & Vegetables,Feedspan,26,69,$4.00 ,7/19/2024,47,159
+21-633-8696,Coconut Sugar,Grains & Pulses,Topiclounge,49,59,$5.00 ,5/26/2024,93,132
+76-401-7083,Pomegranate,Fruits & Vegetables,Meeveo,59,79,$6.00 ,7/31/2024,47,166
+92-551-8504,Raw Sugar,Grains & Pulses,Livepath,19,81,$1.50 ,12/24/2024,39,114
+76-264-0748,Eggplant,Fruits & Vegetables,Roombo,47,41,$3.00 ,9/1/2025,39,104
+88-586-8797,Grapes,Fruits & Vegetables,Edgewire,98,62,$5.50 ,9/2/2025,59,159
+21-993-5632,Watermelon,Fruits & Vegetables,Innotype,51,72,$3.00 ,10/23/2024,23,157
+27-681-5588,Anchovies,Seafood,Flipopia,100,99,$10.00 ,7/12/2024,54,107
+23-265-8144,Yogurt,Dairy,Jaxnation,55,50,$1.70 ,10/25/2024,62,106
+26-134-9069,Whipped Cream,Dairy,Devcast,14,87,$4.00 ,1/30/2025,90,95
+76-623-7844,Egg (Quail),Dairy,Vinte,29,33,$0.80 ,5/15/2024,50,121
+88-977-0175,Chocolate Biscuit,Bakery,Yodo,100,1,$5.00 ,7/19/2024,47,27
+12-714-5135,Ricotta Cheese,Dairy,Janyx,49,28,$6.00 ,4/25/2024,70,102
+43-153-8268,Vegetable Oil,Oils & Fats,Abata,75,61,$2.00 ,2/10/2024,79,80
+95-130-9020,Heavy Cream,Dairy,Youbridge,82,12,$4.10 ,1/21/2025,69,106
+82-678-8097,Cottage Cheese,Dairy,Feedmix,68,82,$4.80 ,5/4/2024,90,140
+21-693-8216,Corn Oil,Oils & Fats,Twinte,70,96,$2.50 ,10/27/2024,34,181
+56-831-6199,Salmon,Seafood,Innojam,49,48,$15.00 ,8/14/2024,96,110
+81-268-5905,Mackerel,Seafood,Kazio,89,26,$7.50 ,6/14/2024,48,62
+41-237-5498,Cheese,Dairy,Omba,88,53,$9.00 ,6/2/2025,56,97
+32-987-5559,Green Tea,Beverages,Zoovu,39,88,$8.00 ,5/15/2024,28,188
+71-436-5841,Cauliflower,Fruits & Vegetables,Dynabox,87,91,$2.50 ,6/25/2024,47,185
+63-890-1246,Oatmeal Biscuit,Bakery,Vidoo,93,50,$5.00 ,9/10/2024,76,93
+65-368-2479,Egg (Turkey),Dairy,Browsedrive,23,21,$2.40 ,7/10/2024,81,80
+74-562-7431,Vanilla Biscuit,Bakery,Linkbridge,94,34,$5.50 ,1/11/2024,74,55
+51-583-6029,Digestive Biscuit,Bakery,Kanoodle,38,43,$4.00 ,2/18/2025,72,134
+06-996-3221,Evaporated Milk,Dairy,Buzzshare,11,9,$2.00 ,10/6/2024,48,74
+96-334-2593,White Tea,Beverages,Rhycero,60,27,$25.30 ,11/19/2024,43,85
+58-219-0241,Avocado Oil,Oils & Fats,Twitterwire,50,36,$10.00 ,4/6/2024,27,117
+87-272-6544,Egg (Goose),Dairy,Skalith,90,3,$2.50 ,2/13/2025,51,52
+95-357-2870,Arborio Rice,Grains & Pulses,Talane,86,80,$4.50 ,5/20/2024,22,160
+88-401-3700,Cauliflower,Fruits & Vegetables,Jabberstorm,86,66,$2.50 ,1/20/2025,30,90
+72-404-5581,Almond Flour,Grains & Pulses,Pixonyx,54,17,$9.50 ,8/2/2025,60,107
+11-766-8738,Watermelon,Fruits & Vegetables,Jabbersphere,27,64,$3.00 ,3/22/2024,70,107
+15-796-3130,Rye Bread,Bakery,Kwilith,50,58,$3.00 ,5/29/2024,83,136
+73-751-4393,Onion,Fruits & Vegetables,Skyndu,68,10,$2.00 ,3/23/2024,37,39
+62-100-2245,Sourdough Bread,Bakery,Meevee,22,60,$4.20 ,12/7/2024,62,133
+08-961-3009,Cheese,Dairy,Eimbee,50,14,$9.20 ,8/9/2024,60,20
+33-440-2588,Bell Pepper,Fruits & Vegetables,Tagpad,26,12,$4.40 ,2/24/2025,73,55
+24-009-1208,White Tea,Beverages,Aivee,62,31,$25.00 ,6/2/2025,89,55
+71-300-2191,Broccoli,Fruits & Vegetables,Yamia,79,72,$4.00 ,1/5/2024,67,78
+74-430-8245,Peach,Fruits & Vegetables,Ainyx,73,90,$4.00 ,6/3/2024,75,167
+68-636-4774,Carrot,Fruits & Vegetables,Gevee,18,50,$1.45 ,2/19/2025,44,127
+38-655-2312,Kale,Fruits & Vegetables,Dabshots,79,74,$4.00 ,10/18/2024,80,161
+16-632-1308,Arabica Coffee,Beverages,Voonyx,23,13,$20.00 ,11/21/2024,31,28
+37-606-0510,Milk,Dairy,Jabbercube,18,64,$1.00 ,9/11/2024,73,150
+36-296-9609,Sunflower Oil,Oils & Fats,Photofeed,24,35,$2.50 ,1/12/2024,91,49
+22-329-7791,Watermelon,Fruits & Vegetables,Eidel,53,41,$3.00 ,9/19/2024,24,71
+56-894-3733,Yogurt,Dairy,Skinte,85,83,$1.75 ,2/2/2025,49,96
+06-858-5680,Sesame Oil,Oils & Fats,Miboo,15,34,$6.50 ,1/16/2025,49,91
+71-954-4501,Anchovies,Seafood,Quatz,66,49,$10.00 ,7/26/2024,27,90
+12-046-2988,Corn Oil,Oils & Fats,Youbridge,17,63,$2.50 ,11/21/2024,23,129
+95-356-1566,Grapes,Fruits & Vegetables,Rhynyx,13,61,$5.50 ,1/29/2025,42,138
+34-291-4939,Digestive Biscuit,Bakery,Eimbee,34,49,$4.00 ,2/13/2025,78,76
+35-621-2546,Swiss Cheese,Dairy,Skiptube,85,89,$8.00 ,2/15/2025,68,130
+21-013-3508,Cabbage,Fruits & Vegetables,Meevee,12,95,$1.00 ,10/11/2024,25,144
+38-049-9319,Oatmeal Biscuit,Bakery,Trunyx,82,6,$5.00 ,9/5/2024,21,59
+94-697-2396,Sourdough Bread,Bakery,Zoomlounge,71,97,$4.00 ,7/7/2024,58,141
+33-807-7247,Mozzarella Cheese,Dairy,Blogspan,58,17,$7.00 ,3/1/2025,62,43
+62-816-8794,Rice Flour,Grains & Pulses,Photobug,15,76,$2.00 ,6/2/2025,90,157
+33-507-9886,Pineapple,Fruits & Vegetables,Quinu,68,25,$3.50 ,6/27/2024,25,41
+40-003-7322,White Sugar,Grains & Pulses,Wordtune,13,32,$2.00 ,11/10/2024,38,111
+95-090-2788,Sesame Oil,Oils & Fats,Dabtype,45,7,$6.50 ,8/26/2024,86,65
+06-503-5891,Egg (Goose),Dairy,Babblestorm,40,22,$2.45 ,3/16/2024,76,96
+38-555-9147,Black Coffee,Beverages,Aimbu,62,23,$15.50 ,8/3/2024,34,48
+64-854-8664,Peanut Oil,Oils & Fats,Pixoboo,79,3,$4.00 ,8/30/2024,46,39
+50-942-2409,Peas,Fruits & Vegetables,Meedoo,75,91,$3.00 ,10/12/2024,96,159
+17-493-4579,Almond Flour,Grains & Pulses,Trudoo,76,8,$9.50 ,5/28/2024,24,10
+10-854-5467,Canola Oil,Oils & Fats,Realcube,96,51,$2.30 ,11/26/2024,61,91
+11-604-6002,Canola Oil,Oils & Fats,Kimia,69,17,$2.30 ,5/29/2024,79,44
+44-305-1866,Butter,Dairy,Jayo,48,71,$3.00 ,8/29/2024,95,157
+49-730-0159,Cream,Dairy,Riffpedia,82,3,$2.40 ,8/26/2024,48,85
+70-534-7796,Zucchini,Fruits & Vegetables,Babblestorm,43,21,$2.50 ,1/17/2025,22,52
+95-738-4658,Green Coffee,Beverages,Skyndu,90,68,$12.00 ,10/30/2024,81,142
+20-405-4865,Milk,Dairy,Centimia,13,39,$0.90 ,9/18/2024,46,137
+79-428-8753,Cabbage,Fruits & Vegetables,Skivee,62,79,$1.00 ,12/30/2024,34,174
+10-626-8536,Coconut Sugar,Grains & Pulses,Lazz,17,85,$5.00 ,3/30/2024,76,159
+27-216-9671,Sesame Oil,Oils & Fats,Skilith,100,86,$6.50 ,4/6/2024,77,180
+14-489-8669,All-Purpose Flour,Grains & Pulses,Wikibox,54,69,$1.75 ,5/13/2024,77,137
+46-632-8420,Whipped Cream,Dairy,Skippad,98,24,$4.10 ,5/23/2024,89,28
+39-192-3521,Herbal Tea,Beverages,Dynazzy,20,9,$30.50 ,3/16/2024,46,21
+94-528-8088,Haddock,Seafood,Zoovu,43,7,$9.00 ,8/3/2024,66,70
+74-305-1263,Green Coffee,Beverages,Photobean,29,91,$12.00 ,8/16/2024,28,139
+53-151-5726,Grapes,Fruits & Vegetables,Flipopia,37,45,$5.50 ,4/20/2024,34,107
+02-085-7218,Cheddar Cheese,Dairy,Oyonder,85,28,$8.90 ,1/28/2025,57,60
+77-777-4536,Basmati Rice,Grains & Pulses,Skidoo,26,67,$4.40 ,4/4/2024,54,113
+86-482-6451,White Tea,Beverages,Brightbean,91,78,$25.00 ,10/8/2024,63,139
+36-127-4273,Ricotta Cheese,Dairy,Skimia,50,46,$6.20 ,7/31/2024,88,84
+03-061-1344,Trout,Seafood,Izio,98,65,$12.00 ,6/27/2024,62,141
+97-300-7511,Egg (Duck),Dairy,Katz,37,53,$1.00 ,3/21/2024,90,114
+83-108-1174,White Bread,Bakery,Devpoint,78,68,$2.50 ,12/25/2024,89,136
+38-664-2155,Cauliflower,Fruits & Vegetables,Realpoint,48,27,$2.55 ,5/30/2024,52,100
+80-459-5950,Arabica Coffee,Beverages,Rhyzio,74,10,$20.00 ,3/20/2024,100,84
+93-015-0811,Pineapple,Fruits & Vegetables,Gigashots,18,7,$3.50 ,6/26/2024,88,65
+02-888-9412,Cauliflower,Fruits & Vegetables,Photobug,95,66,$2.48 ,4/2/2025,92,135
+10-218-2680,Egg (Turkey),Dairy,Quinu,39,93,$2.50 ,3/1/2025,26,150
+30-964-2694,Peas,Fruits & Vegetables,Edgeclub,48,72,$3.00 ,6/30/2024,51,127
+15-144-9413,Strawberries,Fruits & Vegetables,Meevee,58,15,$5.90 ,7/29/2024,52,102
+17-253-5688,Greek Yogurt,Dairy,Shufflester,39,55,$3.00 ,6/20/2024,47,94
+31-608-1445,Papaya,Fruits & Vegetables,Ntag,84,28,$4.40 ,12/14/2024,54,57
+51-934-9117,Sardines,Seafood,Linklinks,30,55,$6.00 ,1/31/2025,56,59
+72-810-9753,Sesame Oil,Oils & Fats,Yotz,14,84,$6.50 ,12/12/2024,51,99
+53-146-9979,Powdered Sugar,Grains & Pulses,Skidoo,21,15,$2.50 ,8/8/2024,37,42
+46-622-3434,Jasmine Rice,Grains & Pulses,Topdrive,17,19,$4.75 ,7/23/2024,58,93
+47-843-8207,Cauliflower,Fruits & Vegetables,Cogilith,34,92,$2.50 ,12/27/2024,28,118
+29-135-0791,Jasmine Rice,Grains & Pulses,Babblestorm,56,48,$4.75 ,11/1/2025,71,130
+45-194-4094,Plum,Fruits & Vegetables,Devcast,64,71,$3.90 ,10/10/2024,60,140
+09-712-3630,Grapes,Fruits & Vegetables,Aibox,87,62,$5.50 ,9/30/2024,22,64
+56-213-0577,Papaya,Fruits & Vegetables,Kwinu,24,25,$4.50 ,9/17/2024,24,77
+78-956-4737,Sushi Rice,Grains & Pulses,Photobug,47,1,$4.20 ,4/18/2024,32,61
+29-436-6570,Digestive Biscuit,Bakery,Quatz,61,8,$4.00 ,9/17/2024,73,53
+04-038-1547,Rye Bread,Bakery,Realblab,48,2,$2.80 ,8/6/2024,27,18
+76-476-9996,Chocolate Biscuit,Bakery,Photobean,37,96,$5.00 ,6/12/2024,35,178
+43-469-7551,Arabica Coffee,Beverages,Rhycero,45,36,$20.00 ,1/25/2025,36,133
+15-169-8058,Bread Flour,Grains & Pulses,Feedfire,87,97,$1.50 ,4/18/2024,58,125
+37-567-3218,Almond Flour,Grains & Pulses,Trilia,37,47,$9.50 ,7/20/2024,38,81
+92-455-2959,Robusta Coffee,Beverages,Katz,59,62,$10.30 ,2/25/2024,90,119
+75-672-4378,Pomegranate,Fruits & Vegetables,Eare,62,40,$6.00 ,5/6/2024,45,126
+66-806-6051,Yogurt,Dairy,Devpulse,63,12,$1.70 ,5/23/2024,56,94
+65-527-9488,Grapes,Fruits & Vegetables,Layo,38,72,$5.50 ,10/10/2024,59,111
+36-840-2728,Mackerel,Seafood,Dabfeed,76,21,$7.50 ,3/14/2024,31,24
+07-389-5740,Egg (Quail),Dairy,Skimia,34,94,$0.80 ,7/17/2024,96,163
+13-144-2169,Eggplant,Fruits & Vegetables,Blogpad,25,62,$3.00 ,7/9/2024,57,73
+13-798-3397,Egg (Turkey),Dairy,Twimm,86,16,$2.50 ,12/20/2024,34,53
+85-806-0613,Oatmeal Biscuit,Bakery,Kwimbee,41,21,$5.00 ,4/26/2024,50,68
+67-248-6306,Cauliflower,Fruits & Vegetables,Avamm,77,54,$2.50 ,12/22/2024,64,64
+47-866-6589,Egg (Duck),Dairy,Dynazzy,41,61,$1.00 ,7/27/2024,30,130
+91-127-7489,Orange,Fruits & Vegetables,Oyondu,44,8,$2.95 ,4/8/2024,42,60
+90-343-9640,Avocado Oil,Oils & Fats,Dabtype,53,89,$10.00 ,6/10/2024,22,189
+01-018-6418,Chocolate Biscuit,Bakery,Chatterbridge,68,29,$5.00 ,7/16/2024,70,129
+80-375-9075,Swiss Cheese,Dairy,Centidel,96,34,$8.00 ,6/19/2024,71,91
+80-227-6886,Garlic,Fruits & Vegetables,Layo,33,4,$7.00 ,6/14/2024,46,35
+15-562-3712,Cauliflower,Fruits & Vegetables,Yakitri,33,89,$2.50 ,10/28/2024,90,104
+10-137-9759,Watermelon,Fruits & Vegetables,Trupe,90,17,$3.00 ,10/3/2024,82,34
+69-171-1305,Brown Rice,Grains & Pulses,Livetube,31,29,$2.50 ,11/10/2024,25,86
+83-117-7658,Asparagus,Fruits & Vegetables,Yabox,92,3,$5.00 ,12/19/2024,62,84
+74-642-2435,Cauliflower,Fruits & Vegetables,Skinix,66,31,$2.50 ,8/4/2024,85,49
+10-445-0741,Anchovies,Seafood,Mybuzz,83,17,$10.00 ,3/31/2024,33,56
+80-658-6456,Mango,Fruits & Vegetables,Wordtune,84,9,$5.00 ,10/12/2024,30,55
+81-354-4203,Haddock,Seafood,Yabox,76,57,$9.00 ,4/28/2024,52,135
+08-573-9997,Pomegranate,Fruits & Vegetables,Meevee,26,1,$6.00 ,2/12/2024,82,10
+74-610-2295,Green Coffee,Beverages,Lajo,61,31,$12.50 ,9/26/2024,95,131
+76-070-1411,Evaporated Milk,Dairy,Realcube,15,75,$1.90 ,2/14/2025,71,153
+61-582-7399,Apricot,Fruits & Vegetables,Topiczoom,73,83,$5.00 ,7/22/2024,87,157
+42-674-3917,Whole Wheat Flour,Grains & Pulses,Pixonyx,41,76,$2.65 ,6/6/2024,50,123
+05-899-1428,Avocado Oil,Oils & Fats,Dabjam,14,75,$10.00 ,1/7/2024,65,85
+74-548-9313,Mango,Fruits & Vegetables,Meevee,99,59,$5.00 ,12/2/2025,52,71
+20-448-2972,Asparagus,Fruits & Vegetables,Buzzbean,80,6,$5.00 ,9/16/2024,26,98
+63-162-9244,Eggplant,Fruits & Vegetables,Vimbo,49,89,$3.00 ,5/17/2024,37,154
+91-417-0366,Grapes,Fruits & Vegetables,Riffwire,25,74,$5.50 ,4/12/2024,41,174
+60-311-5701,Sesame Oil,Oils & Fats,Shuffledrive,39,78,$6.50 ,7/17/2024,54,175
+36-899-5324,Orange,Fruits & Vegetables,Flashdog,94,58,$2.90 ,12/19/2024,57,75
+22-266-9291,Sardines,Seafood,Vinder,11,17,$6.00 ,8/4/2024,69,76
+76-584-4790,Peanut Oil,Oils & Fats,Twitterwire,21,52,$4.00 ,1/1/2025,49,132
+82-948-2298,Kiwi,Fruits & Vegetables,Topdrive,38,91,$5.70 ,11/21/2024,53,185
+97-283-4840,Palm Oil,Oils & Fats,Browsetype,58,23,$1.80 ,2/24/2025,82,89
+17-395-1121,Plum,Fruits & Vegetables,Lajo,85,16,$3.85 ,3/12/2024,58,90
+74-132-5528,Cauliflower,Fruits & Vegetables,Vinder,63,62,$2.50 ,1/22/2025,62,160
+52-029-2382,Coconut Oil,Oils & Fats,Brightdog,54,86,$5.00 ,8/4/2024,29,155
+11-053-0107,Cherry,Fruits & Vegetables,Rooxo,30,25,$8.00 ,6/28/2024,42,36
+99-194-5600,Cauliflower,Fruits & Vegetables,Tanoodle,57,25,$2.50 ,5/14/2024,78,123
+48-289-0604,Vegetable Oil,Oils & Fats,Browseblab,18,72,$2.00 ,6/20/2024,25,143
+73-010-8323,Tuna,Seafood,Tagcat,16,34,$18.00 ,4/29/2024,35,123
+06-068-6793,Buttermilk,Dairy,Twitterbeat,39,80,$2.50 ,8/15/2024,46,148
+56-054-8664,Lemon,Fruits & Vegetables,Centimia,59,82,$2.45 ,3/3/2024,30,151
+36-330-5036,Salmon,Seafood,Mycat,79,28,$15.00 ,5/17/2024,42,32
+65-674-6076,Egg (Quail),Dairy,Ntags,78,61,$0.80 ,12/18/2024,49,67
+87-013-6488,Sushi Rice,Grains & Pulses,Tekfly,22,10,$4.25 ,4/14/2024,64,63
+95-449-1286,Egg (Chicken),Dairy,Realfire,10,17,$0.20 ,8/9/2024,100,87
+95-640-0293,Arborio Rice,Grains & Pulses,Geba,34,32,$4.50 ,7/2/2025,42,54
+08-495-6853,Heavy Cream,Dairy,Yadel,74,62,$4.00 ,8/14/2024,65,68
+42-495-7698,Sushi Rice,Grains & Pulses,Latz,10,11,$4.30 ,7/22/2024,29,40
+83-727-0814,Basmati Rice,Grains & Pulses,Yodo,11,87,$4.50 ,5/6/2024,29,151
+01-050-2246,Grapes,Fruits & Vegetables,Gabspot,99,68,$5.50 ,8/9/2024,59,69
+07-858-5487,Swiss Cheese,Dairy,Meeveo,64,14,$8.00 ,12/29/2024,53,58
+20-283-0111,Pear,Fruits & Vegetables,Cogidoo,58,55,$4.45 ,6/1/2025,62,60
+87-391-9658,Corn Oil,Oils & Fats,Centizu,26,100,$2.50 ,7/1/2025,45,113
+44-782-1395,Raw Sugar,Grains & Pulses,Flipopia,72,72,$1.50 ,11/17/2024,39,140
+12-828-1063,Mozzarella Cheese,Dairy,Buzzdog,36,82,$7.10 ,5/8/2024,27,167
+72-989-2512,Mushrooms,Fruits & Vegetables,Yakijo,24,21,$6.00 ,10/28/2024,85,25
+53-667-4109,Onion,Fruits & Vegetables,Voolith,16,75,$2.00 ,5/24/2024,22,117
+93-772-3085,Banana,Fruits & Vegetables,Edgetag,39,19,$13.99 ,1/20/2025,58,37
+92-652-3737,Zucchini,Fruits & Vegetables,Quimm,89,56,$2.50 ,1/10/2024,27,130
+74-404-0582,Cherry,Fruits & Vegetables,Jabbersphere,57,82,$8.00 ,11/6/2024,44,141
+19-244-9890,Herbal Tea,Beverages,Wikido,61,22,$30.00 ,9/11/2024,90,120
+01-839-6534,Short Grain Rice,Grains & Pulses,Tanoodle,56,28,$3.00 ,2/9/2024,93,104
+58-229-1358,Cream,Dairy,Bubblebox,21,24,$2.35 ,9/28/2024,87,26
+80-025-6757,Grapes,Fruits & Vegetables,Thoughtmix,59,29,$5.50 ,1/1/2025,74,129
+35-031-1497,Green Coffee,Beverages,Linklinks,20,68,$12.00 ,2/11/2024,38,88
+26-629-5920,Rye Bread,Bakery,Jetwire,99,6,$3.00 ,12/14/2024,49,94
+51-000-8113,Green Tea,Beverages,Vidoo,24,27,$8.00 ,11/20/2024,49,62
+93-571-7294,Sushi Rice,Grains & Pulses,Quire,78,94,$4.35 ,5/22/2024,69,101
+48-770-6319,Egg (Duck),Dairy,Fivebridge,52,31,$1.00 ,2/2/2025,77,49
+74-818-3306,Spinach,Fruits & Vegetables,Eabox,45,70,$2.45 ,9/5/2024,25,168
+15-082-9124,Apricot,Fruits & Vegetables,LiveZ,89,35,$5.00 ,7/5/2024,49,54
+66-854-5736,Kiwi,Fruits & Vegetables,Vitz,63,57,$5.80 ,10/5/2024,20,68
+90-128-7973,Black Rice,Grains & Pulses,Shuffletag,49,3,$6.25 ,3/13/2024,75,10
+60-198-7050,Green Tea,Beverages,Photobug,26,59,$8.00 ,3/19/2024,92,113
+70-206-4860,Egg (Quail),Dairy,Meejo,93,68,$0.80 ,9/17/2024,30,139
+25-353-2067,Papaya,Fruits & Vegetables,Brightbean,81,16,$4.30 ,7/25/2024,23,85
+93-218-8108,Heavy Cream,Dairy,Talane,74,60,$4.00 ,11/17/2024,99,87
+95-262-6208,Black Tea,Beverages,Devshare,19,78,$5.00 ,7/29/2024,72,168
+02-484-0206,Short Grain Rice,Grains & Pulses,Quatz,64,97,$3.00 ,2/8/2024,48,188
+08-226-5155,Bell Pepper,Fruits & Vegetables,Zava,49,93,$4.50 ,4/27/2024,52,108
+47-581-0363,Parmesan Cheese,Dairy,Tagpad,99,10,$12.00 ,1/20/2025,69,98
+04-104-6993,Buttermilk,Dairy,Trilia,60,1,$2.45 ,10/15/2024,42,43
+45-380-4627,Cabbage,Fruits & Vegetables,Zoombox,90,1,$0.90 ,2/16/2025,52,41
+41-240-8856,Haddock,Seafood,Snaptags,79,53,$9.00 ,10/1/2025,45,65
+81-573-0943,Egg (Chicken),Dairy,Topiclounge,22,58,$0.20 ,11/14/2024,33,60
+67-725-6830,Brown Rice,Grains & Pulses,Quinu,51,47,$2.50 ,6/18/2024,53,53
+55-154-4728,Arabica Coffee,Beverages,Yotz,65,63,$20.00 ,3/29/2024,28,104
+41-526-4036,Whipped Cream,Dairy,Flashset,55,25,$4.00 ,1/29/2025,69,112
+86-273-9377,White Rice,Grains & Pulses,Eimbee,18,86,$1.80 ,11/29/2024,64,106
+98-499-2220,Parmesan Cheese,Dairy,Skidoo,37,3,$12.00 ,11/21/2024,39,48
+50-930-4751,Salmon,Seafood,Abata,88,40,$15.00 ,2/25/2024,96,69
+88-304-2855,Pineapple,Fruits & Vegetables,Brainverse,20,51,$3.50 ,12/2/2025,80,84
+69-743-0161,Bread Flour,Grains & Pulses,Twitterwire,99,54,$1.50 ,11/21/2024,80,125
+40-902-1995,Asparagus,Fruits & Vegetables,Zoomzone,46,88,$4.80 ,1/4/2024,59,108
+50-329-3360,Wild Rice,Grains & Pulses,Topdrive,19,77,$10.00 ,8/25/2024,62,143
+03-441-4252,Yogurt,Dairy,Wordpedia,12,83,$1.75 ,7/24/2024,22,176
+97-093-4278,Buttermilk,Dairy,Twitterlist,69,98,$2.55 ,1/6/2024,29,187
+01-820-5784,Egg (Duck),Dairy,Skipfire,63,38,$1.00 ,4/26/2024,23,115
+31-803-5001,Asparagus,Fruits & Vegetables,Voonder,78,16,$4.70 ,1/6/2024,25,53
+61-317-9944,White Bread,Bakery,Skivee,72,20,$2.50 ,10/29/2024,87,91
+56-303-5256,Wild Rice,Grains & Pulses,Babbleopia,58,24,$10.00 ,3/21/2024,75,49
+86-672-4191,Egg (Goose),Dairy,Einti,88,22,$2.50 ,8/2/2025,54,83
+34-547-0827,White Rice,Grains & Pulses,Wikibox,54,53,$1.80 ,5/7/2024,94,86
+20-387-7746,Powdered Sugar,Grains & Pulses,Aivee,64,10,$2.50 ,10/27/2024,97,110
+50-329-3145,Milk,Dairy,Jatri,12,54,$1.00 ,4/21/2024,31,102
+02-559-8196,Mango,Fruits & Vegetables,Jaxnation,61,14,$5.20 ,7/25/2024,74,63
+69-834-2874,Oatmeal Biscuit,Bakery,Skajo,28,62,$5.00 ,7/10/2024,28,143
+27-474-0056,Spinach,Fruits & Vegetables,Feedfish,23,6,$2.50 ,6/19/2024,95,46
+66-378-7532,Blueberries,Fruits & Vegetables,Flipbug,87,51,$10.00 ,6/5/2024,55,118
+28-185-7303,Robusta Coffee,Beverages,Yozio,59,31,$10.00 ,10/22/2024,48,34
+19-854-3663,Watermelon,Fruits & Vegetables,Dabjam,13,88,$3.00 ,12/14/2024,100,99
+42-175-1648,Pomegranate,Fruits & Vegetables,Browsetype,81,87,$6.00 ,9/9/2024,94,102
+56-657-4387,White Bread,Bakery,Meevee,61,77,$2.50 ,6/22/2024,51,122
+05-720-8792,Carrot,Fruits & Vegetables,Linkbridge,80,91,$1.50 ,10/26/2024,81,127
+84-151-2114,Brown Rice,Grains & Pulses,Avamm,39,57,$2.50 ,11/8/2024,77,111
+10-378-9729,Cabbage,,Rooxo,69,21,$66.55 ,9/21/2024,36,89
+53-930-2215,Egg (Goose),Dairy,Gabvine,60,43,$2.50 ,9/7/2024,77,75
+02-034-6209,Sour Cream,Dairy,Yodel,22,43,$4.10 ,8/10/2024,45,46
+28-003-8065,Almond Flour,Grains & Pulses,Voonte,79,47,$9.50 ,1/28/2025,83,98
+19-021-5024,Broccoli,Fruits & Vegetables,Rhyzio,47,63,$4.00 ,7/5/2024,76,149
+07-846-4804,Jasmine Rice,Grains & Pulses,Tagcat,20,25,$4.75 ,9/25/2024,78,98
+70-542-4269,Gouda Cheese,Dairy,Gigazoom,41,22,$7.00 ,4/17/2024,86,33
+52-797-6961,Tilapia,Seafood,Plajo,46,80,$7.00 ,6/17/2024,62,168
+66-327-2821,Palm Oil,Oils & Fats,Skipstorm,67,57,$1.80 ,5/27/2024,78,93
+12-093-9863,Arborio Rice,Grains & Pulses,Feednation,51,19,$4.50 ,6/26/2024,73,115
+08-396-2704,White Sugar,Grains & Pulses,Cogibox,42,12,$2.00 ,10/5/2024,80,40
+72-970-0239,Sesame Oil,Oils & Fats,Divanoodle,85,86,$6.50 ,7/18/2024,78,107
+03-940-0630,Sunflower Oil,Oils & Fats,Skibox,23,43,$2.50 ,3/4/2024,91,118
+67-130-4114,Bell Pepper,Fruits & Vegetables,Devcast,84,26,$4.50 ,1/24/2025,46,63
+32-270-1385,Greek Yogurt,Fruits & Vegetables,Quaxo,28,38,$42.58 ,8/8/2024,48,61
+85-510-2915,White Bread,Bakery,Mybuzz,62,49,$2.50 ,9/10/2024,42,87
+00-842-9790,Egg (Goose),Dairy,Oba,65,94,$2.50 ,12/28/2024,66,98
+49-377-9731,Lime,Fruits & Vegetables,Livefish,18,8,$2.00 ,4/19/2024,54,76
+96-682-8546,Egg (Chicken),Dairy,Kaymbo,70,29,$0.20 ,9/17/2024,62,53
+92-837-8839,Vegetable Oil,Oils & Fats,Yoveo,23,71,$2.00 ,8/18/2024,63,103
+68-732-5919,Jasmine Rice,Grains & Pulses,Eimbee,26,83,$4.75 ,5/17/2024,75,107
+37-064-7275,Robusta Coffee,Beverages,Skiptube,20,42,$10.00 ,9/22/2024,72,87
+43-193-9915,Mozzarella Cheese,Dairy,Roodel,55,58,$7.20 ,9/23/2024,48,64
+45-992-5653,Whole Wheat Flour,Grains & Pulses,Jaxworks,82,67,$2.75 ,10/19/2024,26,134
+45-852-2446,Salmon,Seafood,Fanoodle,73,12,$15.00 ,11/29/2024,89,40
+57-394-4703,White Tea,Beverages,Agivu,81,83,$25.00 ,10/16/2024,74,119
+07-679-1199,Onion,Fruits & Vegetables,Wikizz,20,65,$2.00 ,10/15/2024,51,126
+47-221-3391,Black Coffee,Beverages,Digitube,78,38,$15.00 ,12/9/2024,54,65
+80-698-0324,Butter Biscuit,Bakery,Bluejam,84,58,$6.00 ,5/25/2024,51,86
+36-383-3677,Corn Oil,Oils & Fats,Centizu,32,38,$2.50 ,2/2/2025,52,61
+42-907-6946,Coconut Oil,Oils & Fats,Bluejam,90,75,$5.00 ,8/31/2024,55,81
+96-209-1739,Evaporated Milk,Dairy,Miboo,70,81,$2.00 ,2/29/2024,24,156
+36-679-4670,Bell Pepper,Fruits & Vegetables,Fatz,90,22,$4.50 ,1/13/2025,81,42
+08-637-9335,Lettuce,Fruits & Vegetables,Meemm,100,7,$2.00 ,7/25/2024,26,21
+56-875-3717,Brown Rice,Grains & Pulses,Youtags,89,54,$2.50 ,3/5/2024,64,69
+86-978-6666,Whole Wheat Flour,Grains & Pulses,Dabjam,38,43,$2.70 ,9/15/2024,34,71
+41-475-5305,Rye Bread,Bakery,Kwideo,61,20,$3.00 ,12/9/2024,71,49
+25-911-7736,Orange,Fruits & Vegetables,Oba,75,48,$3.00 ,8/29/2024,96,73
+28-433-8533,Multigrain Bread,Bakery,Topicware,87,70,$3.20 ,2/2/2025,73,147
+84-624-0201,Bread Flour,Grains & Pulses,Skaboo,71,77,$1.50 ,1/20/2025,34,107
+45-634-0679,Haddock,Seafood,Rhybox,98,100,$9.00 ,8/27/2024,53,134
+93-014-4256,Green Beans,Fruits & Vegetables,BlogXS,19,92,$2.00 ,10/13/2024,51,133
+24-989-3302,Coconut,Fruits & Vegetables,Eazzy,85,90,$5.00 ,7/30/2024,61,106
+46-415-8633,Apple,Fruits & Vegetables,Omba,71,36,$3.50 ,2/1/2025,87,81
+73-117-6105,Brown Rice,Grains & Pulses,Skipfire,44,48,$2.50 ,1/23/2025,67,125
+53-710-7630,Rice Flour,Grains & Pulses,Livetube,25,95,$2.00 ,1/14/2025,24,166
+10-617-7581,Peanut Oil,Oils & Fats,Devpulse,24,14,$4.00 ,6/17/2024,98,19
+66-312-5511,Anchovies,Seafood,Skipfire,44,97,$10.00 ,12/15/2024,80,173
+87-423-8486,Powdered Sugar,Grains & Pulses,Mybuzz,63,4,$2.50 ,9/3/2024,40,50
+64-493-5270,Palm Oil,Oils & Fats,Dynabox,69,59,$1.80 ,5/22/2024,63,88
+31-255-9616,Tuna,Seafood,Centimia,88,71,$18.00 ,3/16/2024,28,80
+26-799-3714,Robusta Coffee,Beverages,Mymm,74,2,$10.00 ,6/4/2024,37,47
+64-119-7804,Bell Pepper,Fruits & Vegetables,Jaxbean,98,43,$4.50 ,12/29/2024,86,52
+74-181-4135,Egg (Chicken),Dairy,Meembee,22,19,$0.20 ,9/17/2024,88,23
+34-369-7712,Apricot,Fruits & Vegetables,Fivebridge,55,96,$5.00 ,6/6/2024,23,136
+31-157-1822,Ricotta Cheese,Dairy,Kwideo,96,80,$6.10 ,1/28/2025,94,100
+27-459-0724,Feta Cheese,Dairy,Quaxo,91,7,$7.00 ,2/24/2025,32,71
+47-441-7682,Digestive Biscuit,Bakery,Vimbo,40,91,$4.00 ,11/30/2024,28,115
+32-676-1026,Salmon,Seafood,Buzzshare,52,46,$15.00 ,4/16/2024,43,58
+77-959-1018,Lettuce,Fruits & Vegetables,Gigabox,22,22,$2.00 ,12/6/2024,62,87
+60-911-3745,Black Rice,Grains & Pulses,Blognation,98,41,$6.35 ,1/18/2025,70,139
+57-101-0060,Whole Wheat Flour,Grains & Pulses,Topicstorm,59,73,$2.75 ,11/9/2024,32,159
+54-758-4622,Chocolate Biscuit,Bakery,Devcast,99,3,$5.00 ,11/21/2024,65,82
+92-152-5820,Black Tea,Beverages,Jaloo,18,36,$5.30 ,6/24/2024,65,89
+44-637-5512,Watermelon,Fruits & Vegetables,Jaxspan,58,12,$3.00 ,5/26/2024,71,111
+65-854-9364,Black Rice,Grains & Pulses,BlogXS,30,34,$6.30 ,4/22/2024,61,130
+60-747-8704,Papaya,Fruits & Vegetables,Twitterwire,97,97,$4.50 ,8/22/2024,53,168
+85-835-3445,Egg (Goose),Dairy,Gigashots,50,93,$2.45 ,12/5/2024,78,130
+66-716-8221,Cheddar Cheese,Dairy,LiveZ,70,96,$9.00 ,1/17/2025,63,131
+01-026-2772,Blueberries,Fruits & Vegetables,Buzzbean,40,61,$10.00 ,5/27/2024,76,108
+21-252-1360,Corn Oil,Oils & Fats,Shuffletag,75,23,$2.50 ,4/7/2024,100,57
+80-039-1261,Strawberries,Fruits & Vegetables,Skimia,26,97,$6.00 ,12/6/2024,94,109
+48-427-0551,Arabica Coffee,Beverages,Jetpulse,13,55,$20.00 ,3/11/2024,67,132
+02-575-1980,Plum,Fruits & Vegetables,Yambee,11,58,$4.00 ,11/24/2024,99,90
+61-293-6327,Salmon,Seafood,Kamba,98,67,$15.00 ,4/4/2024,21,116
+08-519-5579,Broccoli,Fruits & Vegetables,Abatz,35,4,$4.00 ,8/16/2024,90,80
+33-670-6797,Mackerel,Seafood,Wikido,45,56,$7.50 ,5/7/2024,35,120
+29-741-8132,Kale,Fruits & Vegetables,Blogpad,47,22,$4.00 ,3/6/2024,26,91
+89-713-6071,Sesame Oil,Oils & Fats,Tazz,89,66,$6.50 ,11/25/2024,39,94
+00-641-8691,Black Coffee,Beverages,Brainverse,33,22,$15.00 ,8/30/2024,96,116
+68-977-6854,Apricot,Fruits & Vegetables,Blognation,90,30,$5.00 ,2/3/2024,76,72
+86-257-4613,Jasmine Rice,Grains & Pulses,Kwilith,44,26,$4.75 ,5/8/2024,63,86
+06-340-6856,Wild Rice,Grains & Pulses,Podcat,41,56,$9.75 ,2/29/2024,93,68
+11-338-4598,Potato,Fruits & Vegetables,Centimia,72,58,$1.20 ,2/23/2025,96,127
+82-711-0772,Egg (Goose),Dairy,Skyble,72,58,$2.40 ,10/23/2024,36,110
+05-184-4175,Black Coffee,Beverages,Skyndu,40,30,$15.00 ,3/5/2024,33,90
+17-274-6898,Whole Wheat Bread,Bakery,Photobug,36,53,$3.50 ,3/22/2024,67,145
+79-569-8856,Vegetable Oil,Oils & Fats,Digitube,51,87,$2.00 ,11/6/2024,24,173
+00-534-9775,Black Coffee,Beverages,Tagpad,87,91,$14.90 ,8/17/2024,90,114
+94-071-2261,Pear,Fruits & Vegetables,Roodel,79,37,$4.50 ,3/30/2024,33,135
+94-355-3070,Tilapia,Seafood,Jabbercube,14,52,$6.80 ,7/23/2024,64,132
+17-265-1899,Orange,Fruits & Vegetables,Demimbu,81,35,$3.00 ,10/2/2025,86,117
+13-888-0149,Lime,Fruits & Vegetables,Shufflebeat,75,18,$2.00 ,3/15/2024,32,83
+21-890-2826,Gouda Cheese,Dairy,Avaveo,48,12,$7.00 ,9/19/2024,59,74
+05-425-0746,Onion,Fruits & Vegetables,Gabspot,50,68,$2.00 ,5/6/2024,40,158
+88-807-8431,Haddock,Seafood,Eire,11,87,$9.00 ,9/2/2025,86,130
+77-377-1659,Almond Flour,Grains & Pulses,Thoughtblab,74,22,$9.50 ,6/19/2024,24,113
+92-362-3567,Tomato,Fruits & Vegetables,Fivebridge,11,10,$2.50 ,12/25/2024,93,70
+99-961-0767,Heavy Cream,Dairy,Tambee,85,15,$4.00 ,6/12/2024,95,45
+94-092-3355,Cauliflower,Fruits & Vegetables,Flashspan,57,43,$2.50 ,4/8/2024,87,89
+29-344-3658,Lime,Fruits & Vegetables,Yata,75,56,$1.90 ,9/19/2024,63,113
+60-327-4114,Egg (Turkey),Dairy,Katz,63,7,$2.35 ,10/17/2024,78,30
+13-409-9040,White Tea,Beverages,Jazzy,35,20,$25.25 ,8/1/2025,53,62
+75-927-9108,Cabbage,Fruits & Vegetables,Topdrive,24,32,$1.00 ,2/7/2024,55,49
+30-806-3823,Jasmine Rice,Grains & Pulses,Topicware,53,26,$4.75 ,6/3/2024,100,29
+65-780-5622,Butter Biscuit,Bakery,InnoZ,74,81,$6.00 ,5/27/2024,51,122
+94-598-3383,Brown Rice,Grains & Pulses,Viva,79,38,$2.50 ,1/9/2024,43,105
+45-250-4679,Bread Flour,Grains & Pulses,Dazzlesphere,54,78,$1.50 ,5/7/2024,41,159
+45-317-9731,Palm Oil,Oils & Fats,Wordware,44,83,$1.80 ,8/20/2024,46,161
+41-131-3841,Almond Flour,Grains & Pulses,Camido,77,19,$9.50 ,3/20/2024,27,50
+15-905-7750,Apricot,Fruits & Vegetables,Skinix,42,61,$5.00 ,9/29/2024,86,113
+68-973-8812,Sweet Potato,Fruits & Vegetables,Yodo,44,77,$2.00 ,5/24/2024,89,122
+49-570-8214,Sour Cream,Dairy,Realblab,81,76,$4.00 ,12/18/2024,68,86
+57-779-4955,Black Rice,Grains & Pulses,Zazio,92,48,$6.25 ,1/20/2025,38,70
+85-781-5386,Salmon,Seafood,Avavee,78,68,$15.00 ,12/28/2024,47,154
+72-341-1154,Heavy Cream,Dairy,Yodo,85,66,$4.20 ,9/9/2024,65,151
+28-986-8001,Pomegranate,Fruits & Vegetables,Kwideo,65,69,$6.00 ,10/13/2024,80,73
+82-811-7988,Olive Oil,Oils & Fats,Realmix,36,3,$6.00 ,12/13/2024,74,57
+27-495-1912,Potato,Fruits & Vegetables,Thoughtbridge,26,63,$1.20 ,5/24/2024,84,151
+44-480-9446,Sunflower Oil,Oils & Fats,Aibox,39,13,$2.50 ,3/14/2024,84,26
+77-937-1108,White Sugar,Grains & Pulses,Twimm,39,83,$2.00 ,12/4/2024,73,104
+82-538-4809,Cabbage,Fruits & Vegetables,Twitternation,83,61,$1.00 ,10/24/2024,35,65
+69-895-3397,Cucumber,Fruits & Vegetables,Yabox,28,5,$1.80 ,4/3/2024,33,14
+44-112-3331,Tuna,Seafood,Realmix,85,17,$18.00 ,8/4/2024,92,113
+93-682-2069,Lime,Fruits & Vegetables,Roomm,76,39,$2.00 ,8/16/2024,77,54
+49-199-6836,Tomato,Fruits & Vegetables,Thoughtbeat,100,64,$2.50 ,8/24/2024,84,126
+47-221-2470,Pomegranate,Fruits & Vegetables,Teklist,17,45,$6.00 ,10/10/2024,37,89
+71-067-3278,Anchovies,Seafood,Twitterbridge,51,35,$10.00 ,8/16/2024,80,130
+89-388-3239,Grapes,Fruits & Vegetables,Centizu,54,88,$5.50 ,4/19/2024,81,131
+10-555-5971,Sourdough Bread,Bakery,Gigashots,94,56,$4.00 ,9/27/2024,47,136
+82-931-7126,Asparagus,Fruits & Vegetables,Vitz,34,95,$5.00 ,12/5/2024,41,113
+24-228-6840,Herbal Tea,Beverages,Myworks,27,1,$30.00 ,11/28/2024,34,4
+52-392-5312,All-Purpose Flour,Grains & Pulses,Pixonyx,50,42,$1.75 ,7/24/2024,87,62
+36-531-4087,Almond Flour,Grains & Pulses,Skaboo,85,12,$9.50 ,3/14/2024,26,106
+39-810-2042,Rice Flour,Grains & Pulses,Quatz,24,2,$2.00 ,5/9/2024,98,51
+55-164-7723,Halibut,Seafood,Gevee,82,31,$20.00 ,8/1/2025,66,117
+61-680-9496,Apple,Fruits & Vegetables,Wikido,17,14,$3.50 ,4/14/2024,36,31
+24-143-4957,Canola Oil,Oils & Fats,Katz,25,97,$2.30 ,8/15/2024,72,160
+26-456-1992,Tilapia,Seafood,Geba,56,59,$7.00 ,7/29/2024,65,146
+62-998-7250,Evaporated Milk,Dairy,Photobug,72,3,$2.00 ,5/10/2024,52,13
+38-617-7226,Mushrooms,Fruits & Vegetables,Bluezoom,65,42,$6.30 ,7/13/2024,54,104
+00-366-9496,Grapes,Fruits & Vegetables,Kimia,30,66,$5.50 ,12/28/2024,63,94
+76-027-4850,Onion,Fruits & Vegetables,Tavu,39,37,$2.00 ,6/24/2024,25,85
+27-269-5260,Pineapple,Fruits & Vegetables,Rhyloo,14,81,$3.50 ,10/22/2024,74,146
+40-126-0515,Carrot,Fruits & Vegetables,Gigashots,74,37,$1.50 ,12/18/2024,91,94
+31-387-5020,Parmesan Cheese,Dairy,Buzzbean,63,41,$11.90 ,8/14/2024,37,139
+13-673-7016,Peach,Fruits & Vegetables,Youfeed,47,67,$4.00 ,2/23/2025,36,124
+85-212-2729,Egg (Turkey),Dairy,Browsecat,42,94,$2.50 ,5/16/2024,61,173
+99-048-8310,Tomato,Fruits & Vegetables,Demimbu,32,49,$2.50 ,5/27/2024,80,122
+19-112-1616,Lettuce,Fruits & Vegetables,Quamba,88,56,$2.00 ,6/28/2024,25,128
+98-546-7398,Yogurt,Dairy,Thoughtworks,80,69,$1.75 ,4/17/2024,41,140
+63-874-9747,Orange,Fruits & Vegetables,Oloo,36,59,$3.00 ,11/11/2024,25,149
+58-946-5152,Bread Flour,Grains & Pulses,Avaveo,11,77,$1.50 ,10/7/2024,77,84
+65-867-4029,Peach,Fruits & Vegetables,Livepath,40,83,$4.00 ,6/16/2024,92,133
+89-328-9019,Bread Flour,Grains & Pulses,Jazzy,63,43,$1.50 ,8/12/2024,55,51
+02-170-5225,Raw Sugar,Grains & Pulses,Eabox,90,75,$1.50 ,2/23/2025,80,118
+24-478-8277,Multigrain Bread,Bakery,Bubblebox,47,26,$3.25 ,11/26/2024,30,66
+91-290-9062,Digestive Biscuit,Bakery,Zoonder,29,2,$4.00 ,9/25/2024,80,86
+44-546-5713,Peach,Fruits & Vegetables,Blogpad,94,69,$4.00 ,2/13/2025,24,137
+20-031-0532,Mango,Fruits & Vegetables,Oyoloo,32,63,$4.90 ,9/11/2024,84,155
+48-242-8445,Plum,Fruits & Vegetables,Mybuzz,40,3,$4.00 ,6/24/2024,45,8
+33-378-1365,Egg (Goose),Dairy,Tagchat,50,66,$2.50 ,4/2/2025,76,67
+57-763-5501,Cod,Seafood,Kwimbee,72,29,$8.00 ,3/24/2024,54,39
+71-015-9181,Pomegranate,Fruits & Vegetables,Tagopia,22,35,$6.00 ,10/26/2024,41,90
+14-115-8371,Chocolate Biscuit,Bakery,Yakitri,23,76,$5.00 ,1/9/2024,97,146
+83-568-3475,Halibut,Seafood,Camimbo,35,72,$20.00 ,10/2/2025,74,142
+79-884-8810,Cucumber,Fruits & Vegetables,Dabtype,12,93,$1.75 ,8/15/2024,45,122
+50-772-2613,Cheddar Cheese,Dairy,Roomm,86,23,$9.00 ,3/23/2024,100,24
+19-377-5021,Mackerel,Seafood,Skynoodle,91,96,$7.50 ,12/24/2024,90,186
+39-913-2999,Evaporated Milk,Dairy,Centimia,23,99,$2.00 ,10/4/2024,68,196
+46-911-1159,Onion,Fruits & Vegetables,Voolia,98,40,$2.00 ,12/19/2024,46,140
+40-630-1431,Cherry,Fruits & Vegetables,Voomm,29,66,$8.00 ,7/11/2024,74,87
+15-797-4824,Coconut,Fruits & Vegetables,Mudo,32,27,$5.00 ,1/14/2025,38,53
+37-248-6266,Pear,Fruits & Vegetables,Youspan,84,74,$4.50 ,5/24/2024,64,122
+22-760-4605,Yogurt,Dairy,Bubblemix,86,20,$1.75 ,3/8/2024,83,87
+80-020-8041,Black Rice,Grains & Pulses,Wordware,11,58,$6.20 ,8/7/2024,49,84
+44-634-8292,Whole Wheat Flour,Grains & Pulses,Quatz,60,69,$2.75 ,2/1/2025,51,133
+19-610-2236,Whole Wheat Bread,Bakery,Mybuzz,58,48,$3.50 ,3/19/2024,98,57
+49-579-4325,Ricotta Cheese,Dairy,Eadel,64,95,$6.00 ,5/17/2024,55,157
+42-134-9798,Canola Oil,Oils & Fats,Omba,19,80,$2.30 ,12/30/2024,33,167
+84-546-7624,Cherry,Fruits & Vegetables,Gigazoom,43,41,$8.00 ,1/6/2024,27,141
+11-891-8213,Peanut Oil,Oils & Fats,Tagopia,38,62,$4.00 ,11/13/2024,41,109
+03-597-9488,Buttermilk,Dairy,Wordpedia,70,66,$2.50 ,3/28/2024,47,140
+89-624-7462,Asparagus,Fruits & Vegetables,Jaxspan,18,3,$5.00 ,11/24/2024,58,42
+89-335-0155,Brown Rice,Grains & Pulses,Fivebridge,46,81,$2.50 ,1/16/2025,48,128
+59-725-4038,Arabica Coffee,Beverages,Zoozzy,78,34,$20.50 ,8/23/2024,62,73
+78-953-2073,Canola Oil,Oils & Fats,Tagopia,53,20,$2.30 ,4/1/2025,83,95
+91-426-3204,Haddock,Seafood,Geba,67,71,$9.00 ,8/7/2024,76,75
+40-913-9772,Egg (Chicken),Dairy,Einti,36,30,$0.20 ,5/26/2024,68,74
+89-922-4773,Whole Wheat Flour,Grains & Pulses,Mudo,39,53,$2.75 ,12/27/2024,92,117
+17-236-0566,Sweet Potato,Fruits & Vegetables,Einti,95,87,$2.00 ,4/8/2024,61,100
+74-234-0628,Almond Flour,Grains & Pulses,Shuffledrive,12,56,$9.50 ,5/13/2024,56,148
+80-441-7249,Wild Rice,Grains & Pulses,Yoveo,98,30,$10.00 ,10/8/2024,31,69
+54-708-7327,Jasmine Rice,Grains & Pulses,Linktype,50,14,$4.75 ,4/15/2024,52,113
+15-846-7959,Zucchini,Fruits & Vegetables,Vidoo,98,14,$2.50 ,3/20/2024,48,25
+44-368-7112,Corn Oil,Oils & Fats,Devbug,28,32,$2.50 ,6/12/2024,32,103
+03-833-3577,Cucumber,Fruits & Vegetables,Kanoodle,67,14,$1.80 ,10/16/2024,81,39
+47-548-6500,Onion,Fruits & Vegetables,Devpulse,20,93,$2.00 ,12/25/2024,23,130
+12-342-4482,Trout,Seafood,Topicblab,67,83,$11.60 ,8/29/2024,66,173
+07-834-3320,Egg (Quail),Dairy,Trunyx,94,60,$0.80 ,9/20/2024,100,138
+16-187-5729,Black Tea,Beverages,Zoombeat,45,58,$5.00 ,3/30/2024,90,142
+64-109-7362,Anchovies,Seafood,Voolia,86,55,$10.00 ,9/29/2024,37,151
+06-655-5498,Wild Rice,Grains & Pulses,Kayveo,72,82,$9.75 ,9/28/2024,51,134
+24-975-4231,Green Beans,Fruits & Vegetables,Jayo,31,61,$2.10 ,8/17/2024,55,89
+98-652-9569,Butter Biscuit,Bakery,Ooba,12,7,$6.00 ,6/23/2024,72,30
+25-522-6043,Gouda Cheese,Dairy,Kazu,71,93,$7.00 ,3/2/2025,77,168
+28-275-5901,Anchovies,Seafood,Jatri,64,1,$10.00 ,1/24/2025,49,93
+96-164-0607,Coconut Oil,Oils & Fats,Browsezoom,89,79,$5.00 ,10/17/2024,91,145
+93-815-0565,Sesame Oil,Oils & Fats,Jaxworks,50,36,$6.50 ,1/7/2024,53,132
+63-918-8253,Mango,Fruits & Vegetables,Devpulse,53,98,$5.00 ,9/29/2024,41,121
+57-167-0669,Haddock,Seafood,Rhybox,19,99,$9.00 ,12/30/2024,29,177
+52-402-9245,Broccoli,Fruits & Vegetables,Plajo,89,40,$4.00 ,9/19/2024,93,104
+17-647-0503,Cod,Seafood,Katz,96,12,$8.00 ,8/20/2024,97,20
+67-984-5368,Parmesan Cheese,Dairy,Yakidoo,52,56,$12.00 ,7/28/2024,31,90
+77-827-0820,Sesame Oil,Oils & Fats,Youopia,97,20,$6.50 ,9/11/2024,51,28
+27-387-0428,Halibut,Seafood,Camido,88,42,$20.00 ,9/4/2024,92,110
+79-350-5841,Jasmine Rice,Grains & Pulses,Gabvine,33,44,$4.75 ,4/17/2024,93,133
+44-128-2185,Jasmine Rice,Grains & Pulses,Katz,98,20,$4.75 ,12/30/2024,51,101
+48-789-9187,Peach,Fruits & Vegetables,Browsetype,45,79,$4.00 ,11/15/2024,84,174
+21-809-7115,White Rice,Grains & Pulses,Tagcat,80,86,$1.80 ,2/24/2025,46,136
+19-323-0506,Halibut,Seafood,Skidoo,68,43,$20.00 ,10/15/2024,75,139
+04-637-8815,Apricot,Fruits & Vegetables,Zoonder,90,91,$5.00 ,11/24/2024,34,153
+60-644-6596,Trout,Seafood,Rhynoodle,89,67,$12.00 ,10/11/2024,96,156
+58-005-5343,Cucumber,Fruits & Vegetables,Youbridge,38,94,$1.80 ,8/21/2024,89,181
+67-382-4435,Green Beans,Fruits & Vegetables,Fivespan,99,37,$2.10 ,2/3/2024,46,111
+09-335-7793,Powdered Sugar,Grains & Pulses,Topicshots,66,19,$2.40 ,1/6/2024,30,39
+46-496-2930,Pomegranate,Fruits & Vegetables,Eare,66,28,$6.00 ,8/14/2024,85,35
+35-353-4068,Bread Flour,Grains & Pulses,Jetpulse,64,11,$1.50 ,5/7/2024,33,108
+45-050-4720,Black Rice,Grains & Pulses,Voonder,18,78,$6.00 ,3/13/2024,85,121
+87-104-0187,Whole Wheat Flour,Grains & Pulses,Rhyloo,86,100,$2.75 ,5/2/2025,52,178
+85-806-8672,Black Tea,Beverages,Kare,35,88,$4.70 ,11/21/2024,39,175
+54-281-3746,Green Beans,Fruits & Vegetables,Viva,26,70,$2.00 ,3/11/2024,36,122
+35-257-9312,Parmesan Cheese,Dairy,Photospace,80,100,$12.00 ,6/4/2024,100,148
+63-897-8088,Zucchini,Fruits & Vegetables,Skibox,63,56,$2.50 ,10/16/2024,35,89
+24-986-5091,Vanilla Biscuit,Bakery,Ozu,89,22,$5.50 ,8/14/2024,83,45
+17-504-3699,Sweet Potato,Fruits & Vegetables,Jaxworks,80,60,$2.00 ,8/17/2024,98,131
+23-395-3157,Vegetable Oil,Oils & Fats,Tagtune,41,66,$2.00 ,3/16/2024,55,116
+28-107-4953,Chocolate Biscuit,Bakery,Babbleblab,53,19,$5.00 ,10/18/2024,82,113
+46-083-7058,Haddock,Seafood,Devshare,61,91,$9.00 ,9/6/2024,34,131
+68-436-1268,Egg (Duck),Dairy,Aivee,70,92,$1.00 ,11/7/2024,95,166
+93-198-5984,Mango,Fruits & Vegetables,Skalith,73,69,$5.00 ,9/17/2024,50,70
+24-571-1080,Kale,Fruits & Vegetables,Devshare,60,15,$4.00 ,11/4/2024,21,104
+73-874-7534,Pomegranate,Fruits & Vegetables,Twitterwire,88,24,$6.00 ,12/18/2024,72,68
+07-337-9889,Cauliflower,Fruits & Vegetables,Twitterwire,95,6,$2.50 ,9/29/2024,49,65
+28-197-9246,Powdered Sugar,Grains & Pulses,Riffwire,47,30,$2.50 ,5/23/2024,22,46
+83-400-9746,Mozzarella Cheese,Dairy,Eidel,24,1,$7.00 ,2/29/2024,58,66
+24-579-6500,Anchovies,Seafood,Zoovu,93,51,$10.00 ,4/9/2024,81,121
+64-418-8356,Sunflower Oil,Oils & Fats,Ooba,80,24,$2.50 ,4/28/2024,98,84
+15-884-7413,Apple,Fruits & Vegetables,Geba,77,58,$3.50 ,4/16/2024,63,71
+79-494-2472,Green Beans,Fruits & Vegetables,Kanoodle,42,48,$2.00 ,4/23/2024,39,66
+36-177-0573,Egg (Turkey),Dairy,Oyondu,92,1,$2.50 ,4/13/2024,78,24
+79-920-2395,Mushrooms,Fruits & Vegetables,Chatterpoint,81,23,$6.25 ,7/16/2024,92,40
+96-961-2193,Jasmine Rice,Grains & Pulses,Babbleset,46,39,$4.75 ,10/11/2024,36,50
+69-578-7930,Brown Rice,Grains & Pulses,Flipbug,44,67,$2.50 ,5/6/2024,44,98
+40-205-8252,Multigrain Bread,Bakery,Innojam,38,37,$3.50 ,7/14/2024,45,64
+18-107-7886,Evaporated Milk,Dairy,Demivee,64,28,$2.00 ,2/27/2024,74,63
+35-328-8392,Long Grain Rice,Grains & Pulses,Ainyx,39,2,$1.45 ,4/21/2024,20,73
+21-650-9319,White Bread,Bakery,Jazzy,42,88,$2.50 ,4/24/2024,67,183
+99-894-4351,White Sugar,Grains & Pulses,Devpoint,29,54,$2.00 ,12/25/2024,58,108
+63-168-6018,Cucumber,Fruits & Vegetables,Bubblemix,60,63,$1.80 ,1/5/2024,74,144
+26-000-1012,Parmesan Cheese,Dairy,Quatz,65,54,$12.00 ,12/4/2024,69,83
+13-900-9016,Bell Pepper,Fruits & Vegetables,Meetz,89,96,$4.50 ,9/19/2024,38,190
+88-408-0310,Corn Oil,Oils & Fats,Flipopia,50,40,$2.50 ,8/26/2024,28,109
+73-997-6251,Bell Pepper,Fruits & Vegetables,Livetube,94,18,$4.50 ,9/17/2024,44,102
+50-679-2072,Canola Oil,Oils & Fats,Thoughtmix,97,32,$2.30 ,5/30/2024,82,75
+89-673-1543,Digestive Biscuit,Bakery,Lajo,72,78,$4.00 ,3/1/2025,85,79
+56-937-8675,Cream,Dairy,Trilith,62,91,$2.50 ,8/12/2024,41,105
+14-836-2894,Apple,Fruits & Vegetables,Jabbersphere,44,92,$3.50 ,9/25/2024,41,184
+87-903-3486,Peanut Oil,Oils & Fats,Twitterbeat,21,25,$4.00 ,2/29/2024,79,64
+07-617-6934,Coconut Sugar,Grains & Pulses,Feedfire,91,39,$5.00 ,11/16/2024,48,87
+31-403-6234,Tuna,Seafood,Thoughtbeat,87,24,$18.00 ,4/5/2024,22,90
+29-092-3453,Spinach,Fruits & Vegetables,Youbridge,61,17,$2.52 ,6/17/2024,31,86
+34-709-9237,Carrot,Fruits & Vegetables,Gigaclub,61,81,$1.50 ,4/24/2024,26,180
+13-962-6263,Sweet Potato,Fruits & Vegetables,Trupe,49,1,$2.00 ,11/18/2024,97,29
+06-731-2162,Lemon,Fruits & Vegetables,Meejo,87,1,$2.50 ,7/19/2024,61,99
+10-768-2443,Multigrain Bread,Bakery,Katz,93,55,$3.25 ,12/19/2024,56,150
+36-372-2295,Basmati Rice,Grains & Pulses,Skimia,55,13,$4.45 ,4/14/2024,37,84
+34-538-1180,Sour Cream,Dairy,Voonder,29,39,$4.00 ,6/4/2024,23,119
+98-148-0940,Egg (Chicken),Dairy,Babblestorm,63,62,$0.20 ,5/11/2024,67,80
+38-390-2115,Potato,Fruits & Vegetables,Rhyzio,42,69,$1.20 ,1/3/2024,43,123
+02-974-8526,Onion,Fruits & Vegetables,Mudo,74,4,$2.00 ,7/8/2024,97,43
+29-377-7040,Short Grain Rice,Grains & Pulses,Brightdog,22,77,$3.00 ,7/29/2024,68,92
+84-327-7787,Egg (Chicken),Dairy,Bubblemix,83,35,$0.20 ,6/9/2024,94,78
+82-231-4245,Wild Rice,Grains & Pulses,Kayveo,32,91,$10.00 ,1/16/2025,69,171
+70-005-5970,Apple,Fruits & Vegetables,Skaboo,84,46,$3.50 ,12/24/2024,66,126
+63-936-0145,Plum,Fruits & Vegetables,Thoughtbeat,22,56,$4.00 ,3/12/2024,70,128
+08-196-2703,Peas,Fruits & Vegetables,Youbridge,100,52,$3.00 ,10/17/2024,86,54
+22-778-3553,Cheddar Cheese,Dairy,Quaxo,36,77,$9.00 ,9/2/2025,30,126
+37-610-1999,Halibut,Seafood,Wikizz,14,67,$20.00 ,10/19/2024,71,132
+09-618-2842,White Sugar,Grains & Pulses,Yambee,38,82,$2.00 ,6/8/2024,52,99
+28-968-4195,Eggplant,Fruits & Vegetables,Blogtag,97,52,$3.00 ,10/13/2024,22,132
+55-680-0982,Green Tea,Beverages,Jetpulse,64,66,$8.00 ,8/19/2024,25,94
+43-851-9440,Lime,Fruits & Vegetables,Camido,14,75,$1.90 ,4/3/2024,100,94
+14-331-3739,Avocado Oil,Oils & Fats,Voolith,24,89,$10.00 ,3/28/2024,99,116
+54-830-6971,Tilapia,Seafood,Dynava,100,61,$7.00 ,5/18/2024,85,82
+53-008-2419,Jasmine Rice,Grains & Pulses,Skyba,62,36,$4.75 ,5/27/2024,31,132
+39-358-3340,Basmati Rice,Grains & Pulses,Yamia,71,60,$4.50 ,3/14/2024,60,122
+28-146-2641,Parmesan Cheese,Dairy,BlogXS,38,67,$12.00 ,8/4/2024,35,133
+83-556-0996,Powdered Sugar,Grains & Pulses,Jabberstorm,88,34,$2.40 ,10/30/2024,95,128
+53-805-9523,Sourdough Bread,Bakery,Rhyloo,40,30,$4.50 ,5/14/2024,54,95
+82-977-7752,Spinach,Fruits & Vegetables,Shuffledrive,88,78,$2.50 ,4/11/2024,58,95
+62-393-9939,Cheddar Cheese,Dairy,Gabcube,60,9,$9.00 ,5/10/2024,95,98
+31-745-6850,Cabbage,Fruits & Vegetables,Lajo,94,90,$0.90 ,1/11/2024,98,102
+86-692-2312,Avocado Oil,Oils & Fats,Dazzlesphere,30,48,$10.00 ,4/30/2024,22,100
+28-044-4102,Papaya,Fruits & Vegetables,Yakijo,19,28,$4.50 ,8/27/2024,91,111
