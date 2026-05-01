@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import pandas as pd
 
-# Initialize the server (This is the line that was missing!)
+# Initialize the server
 app = FastAPI(title="Stock Replenishment API")
 
 # Allow the frontend to talk to this backend without security blocks (CORS)
@@ -15,11 +15,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# File paths based on your exact folder structure
+# File paths 
 CATALOG_PATH = "grocery-data/cleaned_catalog.csv"
 SALES_PATH = "grocery-data/historical_sales.csv"
 
-# This defines what the frontend must send us
+# This defines what the frontend must send
 class StockEvaluationRequest(BaseModel):
     sku: str
 
