@@ -20,7 +20,7 @@ def evaluate_inventory(item_dict, sales_list):
     # Initialize the RAG Tool pointing exactly to our new document
     policy_tool = FileReadTool(file_path='grocery-data/company_policy.txt')
     
-    # --- 1. Define the Agents ---
+    #Define the Agents
     forecaster = Agent(
         role='Demand Forecaster',
         goal='Analyze 90-day sales history and predict required stock for the next 30 days.',
@@ -46,10 +46,10 @@ def evaluate_inventory(item_dict, sales_list):
         verbose=True,
         llm=MODEL,
         allow_delegation=False,
-        tools=[policy_tool] # <--- We hand the tool specifically to the Manager
+        tools=[policy_tool] #hand the tool specifically to the Manager
     )
 
-    # --- 2. Define the Tasks ---
+    #Define the Tasks
     analyze_demand = Task(
         description=f"Analyze the following 90-day sales history for {item_dict['Product_Name']}: {sales_list}. Calculate the average daily sales and project the demand for the next 30 days.",
         expected_output="A short report detailing the daily average sales and the projected 30-day demand.",
@@ -80,7 +80,7 @@ def evaluate_inventory(item_dict, sales_list):
         agent=manager
     )
 
-    # --- 3. Assemble and Run the Crew ---
+    #Assemble and Run the Crew
     replenishment_crew = Crew(
         agents=[forecaster, budget_controller, manager],
         tasks=[analyze_demand, evaluate_finances, final_decision],

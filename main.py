@@ -60,7 +60,7 @@ def evaluate_stock(request: StockEvaluationRequest):
     # Trigger the Multi-Agent Crew
     ai_output = evaluate_inventory(item_dict, sales_list)
     
-    # Parse the LLM's JSON response (with a safety fallback just in case)
+    # Parse the LLM's JSON response (with a safety fallback)
     try:
         result_data = json.loads(str(ai_output))
         suggested_qty = result_data.get("suggested_order_quantity", 0)
