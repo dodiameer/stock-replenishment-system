@@ -69,6 +69,11 @@ def evaluate_inventory(item_dict, sales_list):
         You MUST use your FileReadTool to read the company policy document. 
         Cross-reference the item details and the supplier name against the policy rules (like perishable limits, financial caps, or supplier MOQs).
         
+        CRITICAL MATH REQUIREMENT: Before determining the final number, you must explicitly calculate:
+        1. The exact capacity limit based on the policy rules.
+        2. The sum of the current stock ({item_dict['Stock_Quantity']}) plus your proposed order.
+        3. Verify that this sum is strictly less than or equal to the capacity limit.
+        
         Determine the final, exact integer quantity of units to reorder. 
         Output ONLY a JSON string containing two keys: 'suggested_order_quantity' (an integer) and 'reasoning_log' (a brief explanation string detailing exactly which policy rules you applied).""",
         expected_output="A strictly formatted JSON string with the final order quantity and a reasoning log that explicitly mentions the policy.",
