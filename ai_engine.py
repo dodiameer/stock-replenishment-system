@@ -9,7 +9,8 @@ from crewai_tools import FileReadTool
 load_dotenv()
 
 # Define our model constant
-MODEL = 'groq/llama-3.3-70b-versatile'
+#MODEL = 'groq/llama-3.3-70b-versatile'
+MODEL = 'openrouter/google/gemma-4-31b-it'
 
 def evaluate_inventory(item_dict, sales_list):
     """
