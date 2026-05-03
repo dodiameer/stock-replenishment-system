@@ -3,8 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Replenish — AI Stock Decision System</title>
-  </head>
+    <title>Replenish - AI Stock Decision System</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">  <script>
+    const full = "Replenish   AI Powered Stock Replenishment System   ";
+    let pos = 0;
+    setInterval(() => {
+      document.title = full.slice(pos) + full.slice(0, pos);
+      pos = (pos + 1) % full.length;
+    }, 90);
+  </script>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
