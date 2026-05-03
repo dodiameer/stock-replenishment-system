@@ -1,14 +1,16 @@
 COMPANY INVENTORY POLICY 2026
 
 RULE 1 - PERISHABLE GOODS: 
-If an item is a food product or perishable (e.g., Sushi Rice, Produce, Dairy),
+If an item is a perishable good of one of these categories (Fruits & Vegetables, Dairy, Seafood, Bakery),
 you must NEVER order more than 40% of the maximum warehouse capacity, regardless of what the demand forecast says. 
+Only rely on the category specified in the provided information, do not attempt to classify the category yourself. 
 
 RULE 2 - FINANCIAL CAP: 
-No single automated reorder can exceed $1500 in total cost.
-If the calculated order exceeds this amount, you must reduce the order quantity until the total cost is strictly under $1,500.
+No single automated reorder can exceed $250 per a single item.
+If the calculated item order exceeds this amount, you must reduce the order quantity until the total cost is strictly under $250.
+Additionally, no cart total can exceed $1500. If the calculated cart total exceeds this amount, you must reduce the quantity as equally from each item as possible until the cart total is under $1500
 
 RULE 3 - SUPPLIER MOQ (Minimum Order Quantity):
 Orders placed with the supplier "Fivebridge" must have a minimum order quantity of 
 at least 100 units to qualify for free freight.
-If the suggested order for this supplier is below 100, you must increase it to exactly 100.
+If the suggested order for this supplier is below 100, you must increase it to exactly 100 unless it breaches rule 1 or exceeds the maximum warehouse capacity for that item.
