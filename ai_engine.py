@@ -9,8 +9,9 @@ from crewai_tools import FileReadTool
 load_dotenv()
 
 # Define our model constant
-#MODEL = 'groq/llama-3.3-70b-versatile'
-MODEL = 'openrouter/google/gemma-4-31b-it'
+llm_model = 'openrouter/google/gemma-4-31b-it'
+if os.getenv("USE_GROQ") == "1":
+    llm_model = 'groq/llama-3.3-70b-versatile'
 
 def evaluate_inventory(item_dict, sales_list):
     """
@@ -27,7 +28,7 @@ def evaluate_inventory(item_dict, sales_list):
         goal='Analyze 90-day sales history and predict required stock for the next 30 days.',
         backstory='You are a veteran supply chain analyst who spots trends in time-series data.',
         verbose=True,
-        llm=MODEL,
+        llm=llm_model,
         allow_delegation=False
     )
 
@@ -36,7 +37,7 @@ def evaluate_inventory(item_dict, sales_list):
         goal='Evaluate the financial viability of stock orders based on unit price and max capacity.',
         backstory='You are a strict financial officer who prevents overspending and warehouse overflow.',
         verbose=True,
-        llm=MODEL,
+        llm=llm_model,
         allow_delegation=False
     )
 
@@ -45,7 +46,7 @@ def evaluate_inventory(item_dict, sales_list):
         goal='Review the forecaster and budget reports, then consult the company policy to make the final executive decision on exactly how many units to reorder.',
         backstory='You are the final decision-maker. You ALWAYS read the company policy document before finalizing any numbers to ensure strict compliance.',
         verbose=True,
-        llm=MODEL,
+        llm=llm_model,
         allow_delegation=False,
         tools=[policy_tool] #hand the tool specifically to the Manager
     )
@@ -112,7 +113,7 @@ def review_basket_compliance(basket_items):
         goal='Review and automatically optimize a proposed cart of inventory orders to strictly comply with company policy.',
         backstory='You are the final executive decision-maker. You ALWAYS read the company policy document. If an order exceeds financial limits, you automatically reduce item quantities (starting with the most expensive total line items) to the maximum allowable amount to ensure compliance.',
         verbose=True,
-        llm=MODEL,
+        llm=llm_model,
         allow_delegation=False,
         tools=[policy_tool]
     )
