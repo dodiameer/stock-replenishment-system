@@ -1,4 +1,4 @@
-Product_ID,Product_Name,Catagory,Supplier_Name,Stock_Quantity,Reorder_Level,Unit_Price,Expiration_Date,Sales_Volume,Max_Capacity
+Product_ID,Product_Name,Category,Supplier_Name,Stock_Quantity,Reorder_Level,Unit_Price,Expiration_Date,Sales_Volume,Max_Capacity
 29-205-1132,Sushi Rice,Grains & Pulses,Jaxnation,22,72,$4.50 ,9/19/2024,32,142
 40-681-9981,Arabica Coffee,Beverages,Feedmix,45,77,$20.00 ,8/5/2024,85,79
 06-955-3428,Black Rice,Grains & Pulses,Vinder,30,38,$6.00 ,9/22/2024,31,121

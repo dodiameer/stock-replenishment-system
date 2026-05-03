@@ -9,7 +9,9 @@ from crewai_tools import FileReadTool
 load_dotenv()
 
 # Define our model constant
-MODEL = 'groq/llama-3.3-70b-versatile'
+llm_model = 'openrouter/google/gemma-4-31b-it'
+if os.getenv("USE_GROQ") == "1":
+    llm_model = 'groq/llama-3.3-70b-versatile'
 
 def evaluate_inventory(item_dict, sales_list):
     """
@@ -26,7 +28,7 @@ def evaluate_inventory(item_dict, sales_list):
         goal='Analyze 90-day sales history and predict required stock for the next 30 days.',
         backstory='You are a veteran supply chain analyst who spots trends in time-series data.',
         verbose=True,
-        llm=MODEL,
+        llm=llm_model,
         allow_delegation=False
     )
 
@@ -35,7 +37,7 @@ def evaluate_inventory(item_dict, sales_list):
         goal='Evaluate the financial viability of stock orders based on unit price and max capacity.',
         backstory='You are a strict financial officer who prevents overspending and warehouse overflow.',
         verbose=True,
-        llm=MODEL,
+        llm=llm_model,
         allow_delegation=False
     )
 
@@ -44,7 +46,7 @@ def evaluate_inventory(item_dict, sales_list):
         goal='Review the forecaster and budget reports, then consult the company policy to make the final executive decision on exactly how many units to reorder.',
         backstory='You are the final decision-maker. You ALWAYS read the company policy document before finalizing any numbers to ensure strict compliance.',
         verbose=True,
-        llm=MODEL,
+        llm=llm_model,
         allow_delegation=False,
         tools=[policy_tool] #hand the tool specifically to the Manager
     )
@@ -73,7 +75,14 @@ def evaluate_inventory(item_dict, sales_list):
         1. The exact capacity limit based on the policy rules.
         2. The sum of the current stock ({item_dict['Stock_Quantity']}) plus your proposed order.
         3. Verify that this sum is strictly less than or equal to the capacity limit.
-        
+
+        When evaluating the policy, you MUST process Rule 1 using this exact sequence:
+        1. Identify the item's category.
+        2. Check if the category is EXACTLY 'Fruits & Vegetables', 'Dairy', 'Seafood', or 'Bakery'.
+        3. If NO: Explicitly write "Rule 1 does not apply to [Category]" and immediately move to Rule 2 without doing any math.
+        4. If YES: Calculate the 40% maximum capacity limit.
+
+
         Determine the final, exact integer quantity of units to reorder. 
         Output ONLY a JSON string containing two keys: 'suggested_order_quantity' (an integer) and 'reasoning_log' (a brief explanation string detailing exactly which policy rules you applied).""",
         expected_output="A strictly formatted JSON string with the final order quantity and a reasoning log that explicitly mentions the policy.",
@@ -91,3 +100,47 @@ def evaluate_inventory(item_dict, sales_list):
     result = replenishment_crew.kickoff()
     
     return result
+
+def review_basket_compliance(basket_items):
+    """
+    Takes a list of items, calculates the total cost, and uses RAG to ensure 
+    the basket obeys the financial policy. Auto-adjusts quantities if over budget.
+    """
+    policy_tool = FileReadTool(file_path='grocery-data/company_policy.txt')
+    
+    manager = Agent(
+        role='Executive Supply Chain Manager',
+        goal='Review and automatically optimize a proposed cart of inventory orders to strictly comply with company policy.',
+        backstory='You are the final executive decision-maker. You ALWAYS read the company policy document. If an order exceeds financial limits, you automatically reduce item quantities (starting with the most expensive total line items) to the maximum allowable amount to ensure compliance.',
+        verbose=True,
+        llm=llm_model,
+        allow_delegation=False,
+        tools=[policy_tool]
+    )
+
+    review_task = Task(
+        description=f"""Review the following shopping basket of proposed orders:
+        {basket_items}
+        
+        You MUST use your FileReadTool to read the company policy document. 
+        
+        CRITICAL INSTRUCTIONS:
+        1. Calculate the total cost of the entire basket (sum of 'quantity' * 'unit_price' for all items).
+        2. Cross-reference this total against the financial cap rule in the policy.
+        3. If the total exceeds the cap, you MUST reduce the 'quantity' of items until the overall basket total is strictly under the cap.
+        
+        Output ONLY a JSON string containing exactly two keys: 
+        - 'updated_basket': A list of objects containing the 'sku', 'name', 'unit_price', and your new, optimized 'quantity'.
+        - 'reasoning_log': A brief explanation detailing the exact math, which specific item quantities you reduced, and the policy rule applied.
+        """,
+        expected_output="A strictly formatted JSON string with 'updated_basket' and 'reasoning_log'.",
+        agent=manager
+    )
+
+    basket_crew = Crew(
+        agents=[manager],
+        tasks=[review_task],
+        process=Process.sequential
+    )
+
+    return basket_crew.kickoff()
