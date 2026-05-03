@@ -48,9 +48,14 @@ function AIModal({ item, result, onApprove, onReject, onClose }) {
   }
 
   return (
-    <div className="modal-overlay" onClick={(e) => e.target === e.currentTarget && onClose()}>
+    <div
+      className="modal-overlay"
+      onClick={(e) => e.target === e.currentTarget && onClose()}
+    >
       <div className="modal">
-        <button className="modal-close" onClick={onClose}>✕</button>
+        <button className="modal-close" onClick={onClose}>
+          ✕
+        </button>
 
         <div className="modal-header">
           <div className="modal-tag">AI CONSENSUS</div>
@@ -60,7 +65,9 @@ function AIModal({ item, result, onApprove, onReject, onClose }) {
 
         <div className="modal-quantity-block">
           <div className="quantity-label">SUGGESTED ORDER QUANTITY</div>
-          <div className="quantity-value">{result.suggested_order_quantity}</div>
+          <div className="quantity-value">
+            {result.suggested_order_quantity}
+          </div>
           <div className="quantity-unit">units</div>
         </div>
 
@@ -68,9 +75,7 @@ function AIModal({ item, result, onApprove, onReject, onClose }) {
           <div className="reasoning-label">
             <span className="reasoning-icon">◈</span> AGENT REASONING LOG
           </div>
-          <div className="reasoning-text">
-            {result.reasoning_log}
-          </div>
+          <div className="reasoning-text">{result.reasoning_log}</div>
         </div>
 
         {!decision ? (
@@ -112,7 +117,7 @@ export default function App() {
       })
       .then((data) => {
         // backend { items: [...] } veya direkt [...] dönebilir
-        const list = Array.isArray(data) ? data : (data.items || []);
+        const list = Array.isArray(data) ? data : data.items || [];
         setItems(list);
         setLoading(false);
       })
@@ -146,16 +151,19 @@ export default function App() {
   function addToast(message, type = "info") {
     const id = Date.now();
     setToasts((prev) => [...prev, { id, message, type }]);
-    setTimeout(() => setToasts((prev) => prev.filter((t) => t.id !== id)), 4000);
+    setTimeout(
+      () => setToasts((prev) => prev.filter((t) => t.id !== id)),
+      4000,
+    );
   }
 
   function handleApprove(item, qty) {
-    const name = item.Product_Name || item.product_name;
+    const name = item.name; // item.Product_Name || item.product_name;
     addToast(`✓ Order placed: ${qty} units of ${name}`, "success");
   }
 
   function handleReject(item) {
-    const name = item.Product_Name || item.product_name;
+    const name = item.name; // item.Product_Name || item.product_name;
     addToast(`Order for ${name} rejected`, "neutral");
   }
 
@@ -188,23 +196,27 @@ export default function App() {
         <div className="summary-divider" />
         <div className="summary-item">
           <span className="summary-num danger">
-            {items.filter((i) => {
-              const cur = i.Stock_Quantity ?? i.stock_quantity ?? 0;
-              const thr = i.Reorder_Level ?? i.reorder_level ?? 1;
-              return stockRatio(cur, thr) < 30;
-            }).length}
+            {
+              items.filter((i) => {
+                const cur = i.Stock_Quantity ?? i.stock_quantity ?? 0;
+                const thr = i.Reorder_Level ?? i.reorder_level ?? 1;
+                return stockRatio(cur, thr) < 30;
+              }).length
+            }
           </span>
           <span className="summary-label">CRITICAL</span>
         </div>
         <div className="summary-divider" />
         <div className="summary-item">
           <span className="summary-num warn">
-            {items.filter((i) => {
-              const cur = i.Stock_Quantity ?? i.stock_quantity ?? 0;
-              const thr = i.Reorder_Level ?? i.reorder_level ?? 1;
-              const r = stockRatio(cur, thr);
-              return r >= 30 && r < 60;
-            }).length}
+            {
+              items.filter((i) => {
+                const cur = i.Stock_Quantity ?? i.stock_quantity ?? 0;
+                const thr = i.Reorder_Level ?? i.reorder_level ?? 1;
+                const r = stockRatio(cur, thr);
+                return r >= 30 && r < 60;
+              }).length
+            }
           </span>
           <span className="summary-label">WARNING</span>
         </div>
@@ -224,7 +236,9 @@ export default function App() {
             <div className="error-icon">⚠</div>
             <p>Cannot reach backend</p>
             <p className="error-detail">{error}</p>
-            <p className="error-hint">Make sure FastAPI is running on port 8000</p>
+            <p className="error-hint">
+              Make sure FastAPI is running on port 8000
+            </p>
           </div>
         )}
 
@@ -252,11 +266,15 @@ export default function App() {
               </thead>
               <tbody>
                 {items.map((item, idx) => {
+                  if (idx == 0) {
+                    console.log(item);
+                  }
                   const sku = item.sku || item.Product_ID || idx;
                   const name = item.name || item.Product_Name || "—";
-                  const category = item.category || item.Catagory || "—";
+                  const category = item.category || item.Category || "—";
                   const supplier = item.supplier || item.Supplier_Name || "—";
-                  const current = item.current_stock ?? item.Stock_Quantity ?? 0;
+                  const current =
+                    item.current_stock ?? item.Stock_Quantity ?? 0;
                   const threshold = item.threshold ?? item.Reorder_Level ?? 0;
                   const ratio = stockRatio(current, threshold);
                   const isEvaluating = evaluating[sku];
@@ -265,7 +283,11 @@ export default function App() {
                     ratio < 30 ? "row-critical" : ratio < 60 ? "row-warn" : "";
 
                   return (
-                    <tr key={sku} className={urgencyClass} style={{ animationDelay: `${idx * 40}ms` }}>
+                    <tr
+                      key={sku}
+                      className={urgencyClass}
+                      style={{ animationDelay: `${idx * 40}ms` }}
+                    >
                       <td className="sku-cell">{sku}</td>
                       <td className="name-cell">{name}</td>
                       <td>
@@ -273,7 +295,11 @@ export default function App() {
                       </td>
                       <td className="supplier-cell">{supplier}</td>
                       <td className="stock-cell">
-                        <span className={ratio < 30 ? "danger" : ratio < 60 ? "warn" : "ok"}>
+                        <span
+                          className={
+                            ratio < 30 ? "danger" : ratio < 60 ? "warn" : "ok"
+                          }
+                        >
                           {current}
                         </span>
                       </td>
