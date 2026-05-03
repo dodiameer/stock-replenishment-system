@@ -6,12 +6,13 @@ import json
 from typing import List
 # Import the AI engine
 from ai_engine import evaluate_inventory, review_basket_compliance
+import json
 
 class BasketItem(BaseModel):
     sku: str
     name: str
     quantity: int
-    unit_price: float
+    unit_price: str
 
 class BasketRequest(BaseModel):
     basket: List[BasketItem]
@@ -95,5 +96,13 @@ async def evaluate_basket(request: BasketRequest):
     
     # Run the AI manager review
     result = review_basket_compliance(basket_data)
+    final_result = json.loads(result.raw)
     
-    return {"result": result}
+    """
+    result = {
+      updated_basket: [],
+      reasoning_log: ""
+    }
+    """
+    return {"result": final_result}
+

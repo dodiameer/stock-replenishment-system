@@ -1,15 +1,49 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { API_BASE } from "../constants";
+import { ThinkingDots } from "./Icons";
 
-export default function CartModal({ cart, onApprove, onReject, onClose }) {
+export default function CartModal({
+  cart,
+  onApprove,
+  onReject,
+  onClose,
+  onError,
+}) {
   const [decision, setDecision] = useState(null);
-  const [result, setResult] = useState(null);
+  const [evaluationResult, setEvaluationResult] = useState(null);
+  const [currentCart, setCurrentCart] = useState(cart);
+  const [loading, setLoading] = useState(false);
 
   // Calculate the total cost of the basket
-  const totalCost = cart.reduce(
-    (sum, item) =>
-      sum + item.quantity * parseFloat(item.unit_price.replace("$", "")),
-    0,
-  );
+  let totalCost = currentCart.reduce((sum, item) => {
+    return sum + item.quantity * parseFloat(item.unit_price?.replace("$", ""));
+  }, 0);
+
+  function startEvaluation() {
+    setLoading(true);
+    const basket = cart.map((item) => {
+      return {
+        name: item.name,
+        sku: item.sku,
+        quantity: item.quantity,
+        unit_price: item.unit_price,
+      };
+    });
+    fetch(`${API_BASE}/api/evaluate-basket`, {
+      method: "POST",
+      body: JSON.stringify({ basket }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((r) => r.json())
+      .then(({ result }) => {
+        setEvaluationResult(result.reasoning_log);
+        setCurrentCart(result.updated_basket);
+      })
+      .catch(onError)
+      .finally(() => setLoading(false));
+  }
 
   function handleApprove() {
     setDecision("approved");
@@ -42,7 +76,7 @@ export default function CartModal({ cart, onApprove, onReject, onClose }) {
           className="cart-item-list"
           style={{ margin: "15px 0", maxHeight: "200px", overflowY: "auto" }}
         >
-          {cart.map((item, idx) => (
+          {currentCart.map((item, idx) => (
             <div
               key={idx}
               style={{
@@ -59,7 +93,7 @@ export default function CartModal({ cart, onApprove, onReject, onClose }) {
               <div>
                 $
                 {(
-                  item.quantity * parseFloat(item.unit_price.replace("$", ""))
+                  item.quantity * parseFloat(item.unit_price?.replace("$", ""))
                 ).toFixed(2)}
               </div>
             </div>
@@ -79,22 +113,43 @@ export default function CartModal({ cart, onApprove, onReject, onClose }) {
         </div>
 
         {/* Only show the AI reasoning log if the AI actually evaluated and adjusted the cart */}
-        {result && result.reasoning_log && (
+        {evaluationResult && (
           <div className="modal-reasoning">
             <div className="reasoning-label">
               <span className="reasoning-icon">◈</span> AI ADJUSTMENT LOG
             </div>
-            <div className="reasoning-text">{result.reasoning_log}</div>
+            <div className="reasoning-text">{evaluationResult}</div>
           </div>
         )}
 
         {!decision ? (
           <div className="modal-actions">
-            <button className="btn-approve" onClick={handleApprove}>
-              ✓ Submit Full Order
+            <button
+              className="btn-approve"
+              onClick={startEvaluation}
+              disabled={loading || evaluationResult}
+            >
+              {loading ? (
+                <ThinkingDots />
+              ) : evaluationResult ? (
+                "Evaluation complete"
+              ) : (
+                "? Evaluate order"
+              )}
             </button>
-            <button className="btn-reject" onClick={handleReject}>
-              ✕ Cancel
+            <button
+              className="btn-approve"
+              onClick={handleApprove}
+              disabled={loading}
+            >
+              {loading ? <ThinkingDots /> : "✓ Confirm order"}
+            </button>
+            <button
+              className="btn-reject"
+              onClick={handleReject}
+              disabled={loading}
+            >
+              {loading ? <ThinkingDots /> : "✕ Cancel Order"}
             </button>
           </div>
         ) : (

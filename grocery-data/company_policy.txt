@@ -5,7 +5,7 @@ If an item is a food product or perishable (e.g., Sushi Rice, Produce, Dairy),
 you must NEVER order more than 40% of the maximum warehouse capacity, regardless of what the demand forecast says. 
 
 RULE 2 - FINANCIAL CAP: 
-No single automated reorder can exceed $1,500 in total cost.
+No single automated reorder can exceed $1500 in total cost.
 If the calculated order exceeds this amount, you must reduce the order quantity until the total cost is strictly under $1,500.
 
 RULE 3 - SUPPLIER MOQ (Minimum Order Quantity):

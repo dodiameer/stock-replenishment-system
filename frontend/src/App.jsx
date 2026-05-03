@@ -5,8 +5,7 @@ import StockBar from "./components/StockBar";
 import AIModal from "./components/AIModal";
 import CartModal from "./components/CartModal";
 import "./App.css";
-
-const API_BASE = "http://127.0.0.1:8000";
+import { API_BASE } from "./constants";
 
 export default function App() {
   const [items, setItems] = useState([]);
@@ -64,6 +63,9 @@ export default function App() {
   }
 
   function handleApproveItem(item, qty) {
+    if (qty === 0) {
+      return;
+    }
     const name = item.Product_Name || item.name;
     addToast(`Added to cart: ${qty} units of ${name}`, "success");
 
@@ -73,6 +75,31 @@ export default function App() {
   function handleRejectItem(item) {
     const name = item.Product_Name || item.name;
     addToast(`Order for ${name} rejected`, "neutral");
+  }
+
+  function handleApproveCart(approvedCart) {
+    // Calculate total units to make the toast more informative
+    const totalUnits = approvedCart.reduce(
+      (sum, item) => sum + item.quantity,
+      0,
+    );
+
+    addToast(
+      `Success: Order placed for ${approvedCart.length} items (${totalUnits} total units).`,
+      "success",
+    );
+
+    // Close the modal
+    setCartModal(null);
+    setCart([]);
+  }
+
+  function handleRejectCart() {
+    addToast("Order cancelled.", "neutral");
+
+    // Close the modal
+    setCartModal(null);
+    setCart([]);
   }
 
   return (
@@ -127,7 +154,7 @@ export default function App() {
           </span>
           <span className="summary-label">WARNING</span>
         </div>
-        <div style={{ marginLeft: "auto" }}>
+        <div style={{ marginLeft: "auto" }} className="summary-item">
           <button className="evaluate-btn" onClick={() => setCartModal(true)}>
             Show cart
           </button>
@@ -249,9 +276,10 @@ export default function App() {
       {cartModal && (
         <CartModal
           cart={cart}
-          onApprove={handleApproveItem}
-          onReject={handleRejectItem}
+          onApprove={handleApproveCart}
+          onReject={handleRejectCart}
           onClose={() => setCartModal(null)}
+          onError={(err) => addToast(`Error: ${err.message}`, "error")}
         />
       )}
 
