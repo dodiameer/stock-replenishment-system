@@ -3,6 +3,7 @@ import { stockRatio } from "./utils/helpers";
 import { BasketIcon, ThinkingDots } from "./components/Icons";
 import StockBar from "./components/StockBar";
 import AIModal from "./components/AIModal";
+import CartModal from "./components/CartModal";
 import "./App.css";
 
 const API_BASE = "http://127.0.0.1:8000";
@@ -13,7 +14,9 @@ export default function App() {
   const [error, setError] = useState(null);
   const [evaluating, setEvaluating] = useState({});
   const [modal, setModal] = useState(null);
+  const [cartModal, setCartModal] = useState(null);
   const [toasts, setToasts] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     fetch(`${API_BASE}/api/inventory/low-stock`)
@@ -60,12 +63,14 @@ export default function App() {
     );
   }
 
-  function handleApprove(item, qty) {
+  function handleApproveItem(item, qty) {
     const name = item.Product_Name || item.name;
-    addToast(`Order placed: ${qty} units of ${name}`, "success");
+    addToast(`Added to cart: ${qty} units of ${name}`, "success");
+
+    setCart([...cart, { ...item, quantity: qty }]);
   }
 
-  function handleReject(item) {
+  function handleRejectItem(item) {
     const name = item.Product_Name || item.name;
     addToast(`Order for ${name} rejected`, "neutral");
   }
@@ -121,6 +126,11 @@ export default function App() {
             }
           </span>
           <span className="summary-label">WARNING</span>
+        </div>
+        <div style={{ marginLeft: "auto" }}>
+          <button className="evaluate-btn" onClick={() => setCartModal(true)}>
+            Show cart
+          </button>
         </div>
       </div>
 
@@ -230,9 +240,18 @@ export default function App() {
         <AIModal
           item={modal.item}
           result={modal.result}
-          onApprove={handleApprove}
-          onReject={handleReject}
+          onApprove={handleApproveItem}
+          onReject={handleRejectItem}
           onClose={() => setModal(null)}
+        />
+      )}
+
+      {cartModal && (
+        <CartModal
+          cart={cart}
+          onApprove={handleApproveItem}
+          onReject={handleRejectItem}
+          onClose={() => setCartModal(null)}
         />
       )}
 

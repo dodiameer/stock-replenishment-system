@@ -49,7 +49,8 @@ def get_low_stock():
             "category": str(row["Category"]),
             "supplier_name": str(row["Supplier_Name"]),
             "current_stock": int(row['Stock_Quantity']),
-            "threshold": int(row['Reorder_Level'])
+            "threshold": int(row['Reorder_Level']),
+            "unit_price": str(row["Unit_Price"])
         })
         
     return {"items": items}
