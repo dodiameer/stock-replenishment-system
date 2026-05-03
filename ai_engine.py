@@ -91,3 +91,47 @@ def evaluate_inventory(item_dict, sales_list):
     result = replenishment_crew.kickoff()
     
     return result
+
+def review_basket_compliance(basket_items):
+    """
+    Takes a list of items, calculates the total cost, and uses RAG to ensure 
+    the basket obeys the financial policy. Auto-adjusts quantities if over budget.
+    """
+    policy_tool = FileReadTool(file_path='grocery-data/company_policy.txt')
+    
+    manager = Agent(
+        role='Executive Supply Chain Manager',
+        goal='Review and automatically optimize a proposed cart of inventory orders to strictly comply with company policy.',
+        backstory='You are the final executive decision-maker. You ALWAYS read the company policy document. If an order exceeds financial limits, you automatically reduce item quantities (starting with the most expensive total line items) to the maximum allowable amount to ensure compliance.',
+        verbose=True,
+        llm=MODEL,
+        allow_delegation=False,
+        tools=[policy_tool]
+    )
+
+    review_task = Task(
+        description=f"""Review the following shopping basket of proposed orders:
+        {basket_items}
+        
+        You MUST use your FileReadTool to read the company policy document. 
+        
+        CRITICAL INSTRUCTIONS:
+        1. Calculate the total cost of the entire basket (sum of 'quantity' * 'unit_price' for all items).
+        2. Cross-reference this total against the financial cap rule in the policy.
+        3. If the total exceeds the cap, you MUST reduce the 'quantity' of items until the overall basket total is strictly under the cap.
+        
+        Output ONLY a JSON string containing exactly two keys: 
+        - 'updated_basket': A list of objects containing the 'sku', 'name', 'unit_price', and your new, optimized 'quantity'.
+        - 'reasoning_log': A brief explanation detailing the exact math, which specific item quantities you reduced, and the policy rule applied.
+        """,
+        expected_output="A strictly formatted JSON string with 'updated_basket' and 'reasoning_log'.",
+        agent=manager
+    )
+
+    basket_crew = Crew(
+        agents=[manager],
+        tasks=[review_task],
+        process=Process.sequential
+    )
+
+    return basket_crew.kickoff()

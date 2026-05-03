@@ -3,9 +3,18 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import pandas as pd
 import json
-
+from typing import List
 # Import the AI engine
-from ai_engine import evaluate_inventory
+from ai_engine import evaluate_inventory, review_basket_compliance
+
+class BasketItem(BaseModel):
+    sku: str
+    name: str
+    quantity: int
+    unit_price: float
+
+class BasketRequest(BaseModel):
+    basket: List[BasketItem]
 
 app = FastAPI(title="Stock Replenishment API")
 
@@ -37,6 +46,8 @@ def get_low_stock():
         items.append({
             "sku": str(row['Product_ID']),
             "name": str(row['Product_Name']),
+            "category": str(row["Category"]),
+            "supplier_name": str(row["Supplier_Name"]),
             "current_stock": int(row['Stock_Quantity']),
             "threshold": int(row['Reorder_Level'])
         })
@@ -75,3 +86,13 @@ def evaluate_stock(request: StockEvaluationRequest):
         "reasoning_log": reasoning,
         "policy_referenced": "Base Financial Policy"
     }
+
+@app.post("/api/evaluate-basket")
+async def evaluate_basket(request: BasketRequest):
+    # Convert the Pydantic model to a list of dictionaries for the AI
+    basket_data = [item.model_dump() for item in request.basket] # Using model_dump() for Pydantic v2
+    
+    # Run the AI manager review
+    result = review_basket_compliance(basket_data)
+    
+    return {"result": result}

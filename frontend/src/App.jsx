@@ -9,10 +9,14 @@ function stockRatio(current, threshold) {
 
 function StockBar({ current, threshold }) {
   const pct = stockRatio(current, threshold);
-  const color = pct < 30 ? "var(--danger)" : pct < 60 ? "var(--warn)" : "var(--ok)";
+  const color =
+    pct < 30 ? "var(--danger)" : pct < 60 ? "var(--warn)" : "var(--ok)";
   return (
     <div className="stock-bar-track">
-      <div className="stock-bar-fill" style={{ width: `${pct}%`, background: color }} />
+      <div
+        className="stock-bar-fill"
+        style={{ width: `${pct}%`, background: color }}
+      />
     </div>
   );
 }
@@ -20,17 +24,28 @@ function StockBar({ current, threshold }) {
 function ThinkingDots() {
   return (
     <span className="thinking-dots">
-      <span /><span /><span />
+      <span />
+      <span />
+      <span />
     </span>
   );
 }
 
 function BasketIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-      <line x1="3" y1="6" x2="21" y2="6"/>
-      <path d="M16 10a4 4 0 0 1-8 0"/>
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="white"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <path d="M16 10a4 4 0 0 1-8 0" />
     </svg>
   );
 }
@@ -49,9 +64,14 @@ function AIModal({ item, result, onApprove, onReject, onClose }) {
   }
 
   return (
-    <div className="modal-overlay" onClick={(e) => e.target === e.currentTarget && onClose()}>
+    <div
+      className="modal-overlay"
+      onClick={(e) => e.target === e.currentTarget && onClose()}
+    >
       <div className="modal">
-        <button className="modal-close" onClick={onClose}>✕</button>
+        <button className="modal-close" onClick={onClose}>
+          ✕
+        </button>
 
         <div className="modal-header">
           <div className="modal-tag">AI CONSENSUS</div>
@@ -61,7 +81,9 @@ function AIModal({ item, result, onApprove, onReject, onClose }) {
 
         <div className="modal-quantity-block">
           <div className="quantity-label">SUGGESTED ORDER QUANTITY</div>
-          <div className="quantity-value">{result.suggested_order_quantity}</div>
+          <div className="quantity-value">
+            {result.suggested_order_quantity}
+          </div>
           <div className="quantity-unit">units</div>
         </div>
 
@@ -74,8 +96,12 @@ function AIModal({ item, result, onApprove, onReject, onClose }) {
 
         {!decision ? (
           <div className="modal-actions">
-            <button className="btn-approve" onClick={handleApprove}>✓ Approve Order</button>
-            <button className="btn-reject" onClick={handleReject}>✕ Reject</button>
+            <button className="btn-approve" onClick={handleApprove}>
+              ✓ Approve Order
+            </button>
+            <button className="btn-reject" onClick={handleReject}>
+              ✕ Reject
+            </button>
           </div>
         ) : (
           <div className={`decision-banner ${decision}`}>
@@ -104,7 +130,7 @@ export default function App() {
         return r.json();
       })
       .then((data) => {
-        const list = Array.isArray(data) ? data : (data.items || []);
+        const list = Array.isArray(data) ? data : data.items || [];
         setItems(list);
         setLoading(false);
       })
@@ -136,7 +162,10 @@ export default function App() {
   function addToast(message, type = "info") {
     const id = Date.now();
     setToasts((prev) => [...prev, { id, message, type }]);
-    setTimeout(() => setToasts((prev) => prev.filter((t) => t.id !== id)), 4000);
+    setTimeout(
+      () => setToasts((prev) => prev.filter((t) => t.id !== id)),
+      4000,
+    );
   }
 
   function handleApprove(item, qty) {
@@ -177,23 +206,27 @@ export default function App() {
         <div className="summary-divider" />
         <div className="summary-item">
           <span className="summary-num danger">
-            {items.filter((i) => {
-              const cur = i.current_stock ?? i.Stock_Quantity ?? 0;
-              const thr = i.threshold ?? i.Reorder_Level ?? 1;
-              return stockRatio(cur, thr) < 30;
-            }).length}
+            {
+              items.filter((i) => {
+                const cur = i.current_stock ?? i.Stock_Quantity ?? 0;
+                const thr = i.threshold ?? i.Reorder_Level ?? 1;
+                return stockRatio(cur, thr) < 30;
+              }).length
+            }
           </span>
           <span className="summary-label">CRITICAL</span>
         </div>
         <div className="summary-divider" />
         <div className="summary-item">
           <span className="summary-num warn">
-            {items.filter((i) => {
-              const cur = i.current_stock ?? i.Stock_Quantity ?? 0;
-              const thr = i.threshold ?? i.Reorder_Level ?? 1;
-              const r = stockRatio(cur, thr);
-              return r >= 30 && r < 60;
-            }).length}
+            {
+              items.filter((i) => {
+                const cur = i.current_stock ?? i.Stock_Quantity ?? 0;
+                const thr = i.threshold ?? i.Reorder_Level ?? 1;
+                const r = stockRatio(cur, thr);
+                return r >= 30 && r < 60;
+              }).length
+            }
           </span>
           <span className="summary-label">WARNING</span>
         </div>
@@ -212,7 +245,9 @@ export default function App() {
             <div className="error-icon">!</div>
             <p>Cannot reach backend</p>
             <p className="error-detail">{error}</p>
-            <p className="error-hint">Make sure FastAPI is running on port 8000</p>
+            <p className="error-hint">
+              Make sure FastAPI is running on port 8000
+            </p>
           </div>
         )}
 
@@ -230,6 +265,8 @@ export default function App() {
                 <tr>
                   <th>SKU</th>
                   <th>PRODUCT</th>
+                  <th>CATEGORY</th>
+                  <th>SUPPLIER</th>
                   <th>CURRENT STOCK</th>
                   <th>REORDER LEVEL</th>
                   <th>LEVEL</th>
@@ -240,18 +277,32 @@ export default function App() {
                 {items.map((item, idx) => {
                   const sku = item.sku || item.Product_ID || idx;
                   const name = item.name || item.Product_Name || "Unknown";
-                  const current = item.current_stock ?? item.Stock_Quantity ?? 0;
+                  const category = item.category || "Unknown";
+                  const supplier_name = item.supplier_name || "Unknown";
+                  const current =
+                    item.current_stock ?? item.Stock_Quantity ?? 0;
                   const threshold = item.threshold ?? item.Reorder_Level ?? 0;
                   const ratio = stockRatio(current, threshold);
                   const isEvaluating = evaluating[sku];
-                  const urgencyClass = ratio < 30 ? "row-critical" : ratio < 60 ? "row-warn" : "";
+                  const urgencyClass =
+                    ratio < 30 ? "row-critical" : ratio < 60 ? "row-warn" : "";
 
                   return (
-                    <tr key={sku} className={urgencyClass} style={{ animationDelay: `${idx * 40}ms` }}>
+                    <tr
+                      key={sku}
+                      className={urgencyClass}
+                      style={{ animationDelay: `${idx * 40}ms` }}
+                    >
                       <td className="sku-cell">{sku}</td>
                       <td className="name-cell">{name}</td>
+                      <td className="name-cell">{category}</td>
+                      <td className="name-cell">{supplier_name}</td>
                       <td className="stock-cell">
-                        <span className={ratio < 30 ? "danger" : ratio < 60 ? "warn" : "ok"}>
+                        <span
+                          className={
+                            ratio < 30 ? "danger" : ratio < 60 ? "warn" : "ok"
+                          }
+                        >
                           {current}
                         </span>
                       </td>
@@ -265,7 +316,13 @@ export default function App() {
                           onClick={() => handleEvaluate(item)}
                           disabled={isEvaluating}
                         >
-                          {isEvaluating ? (<>Thinking <ThinkingDots /></>) : "Evaluate with AI"}
+                          {isEvaluating ? (
+                            <>
+                              Thinking <ThinkingDots />
+                            </>
+                          ) : (
+                            "Evaluate with AI"
+                          )}
                         </button>
                       </td>
                     </tr>
@@ -289,7 +346,9 @@ export default function App() {
 
       <div className="toast-container">
         {toasts.map((t) => (
-          <div key={t.id} className={`toast toast-${t.type}`}>{t.message}</div>
+          <div key={t.id} className={`toast toast-${t.type}`}>
+            {t.message}
+          </div>
         ))}
       </div>
     </div>
