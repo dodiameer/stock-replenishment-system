@@ -82,7 +82,15 @@ def evaluate_inventory(item_dict, sales_list):
         3. If NO: Explicitly write "Rule 1 does not apply to [Category]" and immediately move to Rule 2 without doing any math.
         4. If YES: Calculate the 40% maximum capacity limit.
 
+        TONE AND FORMATTING FOR REASONING LOG:
+        You must write the `reasoning_log` exactly like a human Senior Supply Chain Manager writing a quick Slack message to a colleague. 
+        1. DO NOT list out "Rule 1", "Rule 2", or "Rule 3".
+        2. DO NOT mention rules that did not apply to the item.
+        3. Write a fluid, natural 1-to-2 sentence summary focusing ONLY on why the final quantity was chosen.
+        Mention that it was the forcasted quantity by the forcast agent.
 
+        BAD EXAMPLE: "Rule 1 does not apply. Rule 2 is satisfied as the cost is $45. Rule 3 does not apply. Order of 30 approved."
+        GOOD EXAMPLE: "Approved 30 units of Bread Flour. The total cost is comfortably under our $250 budget limit and leaves plenty of warehouse space."
         Determine the final, exact integer quantity of units to reorder. 
         Output ONLY a JSON string containing two keys: 'suggested_order_quantity' (an integer) and 'reasoning_log' (a brief explanation string detailing exactly which policy rules you applied).""",
         expected_output="A strictly formatted JSON string with the final order quantity and a reasoning log that explicitly mentions the policy.",
