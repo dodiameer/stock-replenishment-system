@@ -1,8 +1,11 @@
+import { useState, useEffect } from "react";
+import { API_BASE } from "../constants";
+
 export function useInventory() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  // useEffect fetch logic here...
+
   useEffect(() => {
     fetch(`${API_BASE}/api/inventory/low-stock`)
       .then((r) => {
@@ -18,6 +21,7 @@ export function useInventory() {
         setError(err.message);
         setLoading(false);
       });
-  }, []);
+  }, []); // <-- this empty array is critical, without it the fetch runs on every render
+
   return { items, loading, error };
 }

@@ -140,8 +140,10 @@ export default function App() {
       {cartModal && (
         <CartModal
           cart={cart}
-          onApprove={handleApproveCart}
-          onReject={handleRejectCart}
+          onApprove={(approvedCart) =>
+            handleApproveCart(approvedCart, () => setCartModal(null))
+          }
+          onReject={() => handleRejectCart(() => setCartModal(null))}
           onClose={() => setCartModal(null)}
           onError={(err) => addToast(`Error: ${err.message}`, "error")}
         />
