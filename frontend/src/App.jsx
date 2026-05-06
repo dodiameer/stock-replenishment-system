@@ -16,7 +16,16 @@ export default function App() {
   const [cartModal, setCartModal] = useState(null);
 
   const { toasts, addToast } = useToasts();
-  const { items, loading, error, sortOrder, toggleSort } = useInventory();
+  const {
+    items,
+    loading,
+    error,
+    sortOrder,
+    toggleSort,
+    searchQuery,
+    setSearchQuery,
+  } = useInventory();
+
   const { evaluating, handleEvaluate } = useEvaluate(addToast, setModal);
   const {
     cart,
@@ -67,7 +76,28 @@ export default function App() {
           </button>
         </div>
       </div>
-
+      <div
+        className="search-bar-container"
+        style={{
+          padding: "1rem 2rem",
+          background: "white",
+          borderBottom: "1px solid #eee",
+        }}
+      >
+        <input
+          type="text"
+          placeholder="Search by SKU, Product, Category, or Supplier..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          style={{
+            width: "100%",
+            padding: "0.75rem",
+            borderRadius: "6px",
+            border: "1px solid #ccc",
+            fontSize: "1rem",
+          }}
+        />
+      </div>
       <main className="main-content">
         {loading && (
           <div className="state-container">

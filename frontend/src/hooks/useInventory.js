@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
+import Fuse from "fuse.js";
 import { API_BASE } from "../constants";
 
 export function useInventory() {
@@ -6,6 +7,10 @@ export function useInventory() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [sortOrder, setSortOrder] = useState(null);
+
+  // New Search States
+  const [searchQuery, setSearchQuery] = useState("");
+  const [debouncedQuery, setDebouncedQuery] = useState("");
 
   useEffect(() => {
     fetch(`${API_BASE}/api/inventory/low-stock`)
@@ -22,31 +27,61 @@ export function useInventory() {
         setError(err.message);
         setLoading(false);
       });
-  }, []); // <-- this empty array is critical, without it the fetch runs on every render
+  }, []);
+
+  // Debounce the search query by 300ms
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedQuery(searchQuery);
+    }, 300);
+    return () => clearTimeout(handler);
+  }, [searchQuery]);
+
   const toggleSort = () => {
     if (sortOrder === "asc") setSortOrder("desc");
-    else if (sortOrder === "desc")
-      setSortOrder(null); // Reset to default
+    else if (sortOrder === "desc") setSortOrder(null);
     else setSortOrder("asc");
   };
 
-  // useMemo recalculates this ONLY when 'items' or 'sortOrder' changes
-  const sortedItems = useMemo(() => {
-    if (!sortOrder) return items;
+  const fuse = new Fuse(items, {
+    keys: [
+      "Product_ID",
+      "sku",
+      "Product_Name",
+      "name",
+      "category",
+      "supplier_name",
+    ], // Multi-field indexing
+    threshold: 0.3, // Fuzzy matching tolerance (lower is stricter)
+  });
+  // Process data: Search first, then Sort
+  const processedItems = useMemo(() => {
+    let result = items;
 
-    // Create a copy of the array so we don't mutate the original state
-    return [...items].sort((a, b) => {
-      const stockA = a.current_stock ?? a.Stock_Quantity ?? 0;
-      const stockB = b.current_stock ?? b.Stock_Quantity ?? 0;
+    // 1. Execute Advanced Search
+    if (debouncedQuery.trim() !== "") {
+      result = fuse.search(debouncedQuery).map((res) => res.item);
+    }
 
-      return sortOrder === "asc" ? stockA - stockB : stockB - stockA;
-    });
-  }, [items, sortOrder]);
+    // 2. Execute Sort
+    if (sortOrder) {
+      result = [...result].sort((a, b) => {
+        const stockA = a.current_stock ?? a.Stock_Quantity ?? 0;
+        const stockB = b.current_stock ?? b.Stock_Quantity ?? 0;
+        return sortOrder === "asc" ? stockA - stockB : stockB - stockA;
+      });
+    }
+
+    return result;
+  }, [items, debouncedQuery, sortOrder]);
+
   return {
-    items: sortedItems,
+    items: processedItems,
     loading,
     error,
     sortOrder,
     toggleSort,
+    searchQuery,
+    setSearchQuery,
   };
 }
