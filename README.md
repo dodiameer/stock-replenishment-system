@@ -1,29 +1,36 @@
-# AI-Powered Stock Replenishment System
+# REPLENISH: AI-Powered Stock Decision System
 
-## 📌 Project Overview
+REPLENISH is a full-stack, AI-driven inventory management application. It replaces static stock alerts with intelligent, multi-agent AI (powered by CrewAI) that automatically evaluates, approves, and optimizes bulk restock orders based on strict company policies (budget limits, warehouse capacity, and perishable goods rules).
 
-This project is a Minimum Viable Product (MVP) for an intelligent supply chain management system. It leverages a Multi-Agent Artificial Intelligence architecture to automate the evaluation of low-stock inventory and intelligently determine optimal reorder quantities based on historical data, budget constraints, and business rules.
+## Key Features
 
-## 🎯 The Problem
+- **Intelligent Batch Processing:** Evaluate multiple low-stock items at once using the AI Cart system.
+- **Auto-Optimization:** If an order breaches company policy (e.g., exceeds the $1500 cart limit), the AI agent automatically recalculates and reduces quantities to ensure compliance instead of just rejecting the order.
+- **Humanized AI Logs:** Receive clear, natural-language reasoning logs explaining exactly _why_ the AI made its purchasing decisions.
+- **Advanced Search & Filter:** Instant frontend fuzzy search (via Fuse.js) with multi-field indexing (SKU, Name, Category, Supplier) and typo tolerance.
+- **Sorting:** Clickable table headers to instantly sort inventory by stock levels.
+- **Cost-Efficient AI Routing:** Environment-variable-based model switching. Uses faster, cheaper models for rapid local testing and heavy-duty 70B models for final production.
 
-Traditional supply chain management requires human operators to manually monitor stock levels, cross-reference historical sales trends, and verify budgets before placing supplier orders. This process is time-consuming, prone to human error, and struggles to scale dynamically.
+## Tech Stack
 
-## 💡 The Solution
+- **Frontend:** React, Vite (or CRA), CSS, Custom Hooks architecture, Fuse.js
+- **Backend:** Python, FastAPI, Uvicorn
+- **AI & Logic:** CrewAI, LangChain, dynamically routed LLMs (Gemma / LLaMA 3.3)
 
-We are building a decoupled, full-stack application that replaces the manual review process with an AI consensus mechanism. When an item falls below its safety stock threshold, the system triggers a team of AI agents to evaluate the situation and propose a data-backed reorder decision to a human manager.
+## Project Structure
 
-## 🏗️ System Architecture
-
-The project is divided into three core components:
-
-1. **The User Interface (Frontend):**
-   A dashboard for human managers to view low-stock alerts, read the AI's reasoning logs, and ultimately approve or reject the suggested reorder quantities.
-
-2. **The Data Server (Backend):**
-   A fast, RESTful API (built with FastAPI) that serves the product catalog and historical time-series sales data to both the frontend UI and the AI engine.
-
-3. **The AI Engine (Multi-Agent System):**
-   Powered by CrewAI, this system consists of specialized AI personas working in tandem:
-   - **The Forecaster:** Analyzes 90-day historical sales data to predict immediate future demand.
-   - **The Budget Controller:** Evaluates unit prices and supplier constraints to ensure financial viability.
-   - **The Manager:** Synthesizes the data, applies Retrieval-Augmented Generation (RAG) against company policy documents, and outputs the final reorder recommendation.
+```text
+replenish/
+├── backend/                  # Python Microservice
+│   ├── main.py               # FastAPI server & endpoints
+│   ├── ai_engine.py          # CrewAI agents and task definitions
+│   ├── company_policy.txt    # RAG knowledge base for the AI
+│   └── .env                  # API keys and feature flags
+├── grocery-data/             # Mock database (CSV/JSON files)
+├── src/                      # React Frontend
+│   ├── components/           # Isolated UI components
+│   ├── hooks/                # Custom state and API logic
+│   └── App.jsx               # Main application layout
+├── package.json
+└── README.md
+```
