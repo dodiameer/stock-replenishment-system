@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { API_BASE } from "../constants";
 
 export function useInventory() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [sortOrder, setSortOrder] = useState(null);
 
   useEffect(() => {
     fetch(`${API_BASE}/api/inventory/low-stock`)
@@ -22,6 +23,30 @@ export function useInventory() {
         setLoading(false);
       });
   }, []); // <-- this empty array is critical, without it the fetch runs on every render
+  const toggleSort = () => {
+    if (sortOrder === "asc") setSortOrder("desc");
+    else if (sortOrder === "desc")
+      setSortOrder(null); // Reset to default
+    else setSortOrder("asc");
+  };
 
-  return { items, loading, error };
+  // useMemo recalculates this ONLY when 'items' or 'sortOrder' changes
+  const sortedItems = useMemo(() => {
+    if (!sortOrder) return items;
+
+    // Create a copy of the array so we don't mutate the original state
+    return [...items].sort((a, b) => {
+      const stockA = a.current_stock ?? a.Stock_Quantity ?? 0;
+      const stockB = b.current_stock ?? b.Stock_Quantity ?? 0;
+
+      return sortOrder === "asc" ? stockA - stockB : stockB - stockA;
+    });
+  }, [items, sortOrder]);
+  return {
+    items: sortedItems,
+    loading,
+    error,
+    sortOrder,
+    toggleSort,
+  };
 }

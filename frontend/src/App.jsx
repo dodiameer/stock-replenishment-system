@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { criticalCount, warningCount } from "./utils/helpers";
 import { BasketIcon } from "./components/Icons";
 import { useToasts } from "./hooks/useToasts";
@@ -16,7 +16,7 @@ export default function App() {
   const [cartModal, setCartModal] = useState(null);
 
   const { toasts, addToast } = useToasts();
-  const { items, loading, error } = useInventory();
+  const { items, loading, error, sortOrder, toggleSort } = useInventory();
   const { evaluating, handleEvaluate } = useEvaluate(addToast, setModal);
   const {
     cart,
@@ -103,7 +103,18 @@ export default function App() {
                   <th>PRODUCT</th>
                   <th>CATEGORY</th>
                   <th>SUPPLIER</th>
-                  <th>CURRENT STOCK</th>
+                  <th
+                    onClick={toggleSort}
+                    style={{ cursor: "pointer", userSelect: "none" }}
+                    title="Click to sort by stock amount"
+                  >
+                    CURRENT STOCK{" "}
+                    {sortOrder === "asc"
+                      ? "↑"
+                      : sortOrder === "desc"
+                        ? "↓"
+                        : "↕"}
+                  </th>
                   <th>REORDER LEVEL</th>
                   <th>LEVEL</th>
                   <th></th>
