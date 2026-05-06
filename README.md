@@ -13,9 +13,9 @@ REPLENISH is a full-stack, AI-driven inventory management application. It replac
 
 ## Tech Stack
 
-- **Frontend:** React, Vite (or CRA), CSS, Custom Hooks architecture, Fuse.js
-- **Backend:** Python, FastAPI, Uvicorn
-- **AI & Logic:** CrewAI, LangChain, dynamically routed LLMs (Gemma / LLaMA 3.3)
+- **Frontend:** React, Vite, CSS.
+- **Backend:** Python, FastAPI.
+- **AI & Logic:** CrewAI, LangChain.
 
 ## Project Structure
 
