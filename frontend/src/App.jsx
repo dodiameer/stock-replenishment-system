@@ -1,106 +1,30 @@
-import { useState, useEffect, useCallback } from "react";
-import { stockRatio } from "./utils/helpers";
-import { BasketIcon, ThinkingDots } from "./components/Icons";
-import StockBar from "./components/StockBar";
+import { useState } from "react";
+import { criticalCount, warningCount } from "./utils/helpers";
+import { BasketIcon } from "./components/Icons";
+import { useToasts } from "./hooks/useToasts";
+import { useInventory } from "./hooks/useInventory";
+import { useEvaluate } from "./hooks/useEvaluate";
+import { useCart } from "./hooks/useCart";
+import InventoryRow from "./components/InventoryRow";
 import AIModal from "./components/AIModal";
 import CartModal from "./components/CartModal";
 import "./App.css";
 import { API_BASE } from "./constants";
 
 export default function App() {
-  const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [evaluating, setEvaluating] = useState({});
   const [modal, setModal] = useState(null);
   const [cartModal, setCartModal] = useState(null);
-  const [toasts, setToasts] = useState([]);
-  const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    fetch(`${API_BASE}/api/inventory/low-stock`)
-      .then((r) => {
-        if (!r.ok) throw new Error(`Server error ${r.status}`);
-        return r.json();
-      })
-      .then((data) => {
-        const list = Array.isArray(data) ? data : data.items || [];
-        setItems(list);
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setLoading(false);
-      });
-  }, []);
-
-  const handleEvaluate = useCallback(async (item) => {
-    const sku = item.Product_ID || item.sku;
-    setEvaluating((prev) => ({ ...prev, [sku]: true }));
-    try {
-      const res = await fetch(`${API_BASE}/api/evaluate-stock`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sku }),
-      });
-      if (!res.ok) throw new Error(`Server error ${res.status}`);
-      const result = await res.json();
-      setModal({ item, result });
-    } catch (err) {
-      addToast(`Error: ${err.message}`, "error");
-    } finally {
-      setEvaluating((prev) => ({ ...prev, [sku]: false }));
-    }
-  }, []);
-
-  function addToast(message, type = "info") {
-    const id = Date.now();
-    setToasts((prev) => [...prev, { id, message, type }]);
-    setTimeout(
-      () => setToasts((prev) => prev.filter((t) => t.id !== id)),
-      4000,
-    );
-  }
-
-  function handleApproveItem(item, qty) {
-    if (qty === 0) {
-      return;
-    }
-    const name = item.Product_Name || item.name;
-    addToast(`Added to cart: ${qty} units of ${name}`, "success");
-
-    setCart([...cart, { ...item, quantity: qty }]);
-  }
-
-  function handleRejectItem(item) {
-    const name = item.Product_Name || item.name;
-    addToast(`Order for ${name} rejected`, "neutral");
-  }
-
-  function handleApproveCart(approvedCart) {
-    // Calculate total units to make the toast more informative
-    const totalUnits = approvedCart.reduce(
-      (sum, item) => sum + item.quantity,
-      0,
-    );
-
-    addToast(
-      `Success: Order placed for ${approvedCart.length} items (${totalUnits} total units).`,
-      "success",
-    );
-
-    // Close the modal
-    setCartModal(null);
-    setCart([]);
-  }
-
-  function handleRejectCart() {
-    addToast("Order cancelled.", "neutral");
-
-    // Close the modal
-    setCartModal(null);
-    setCart([]);
-  }
+  const { toasts, addToast } = useToasts();
+  const { items, loading, error } = useInventory();
+  const { evaluating, handleEvaluate } = useEvaluate(addToast, setModal);
+  const {
+    cart,
+    handleApproveItem,
+    handleRejectItem,
+    handleApproveCart,
+    handleRejectCart,
+  } = useCart(addToast, setCartModal);
 
   return (
     <div className="app">
@@ -129,29 +53,12 @@ export default function App() {
         </div>
         <div className="summary-divider" />
         <div className="summary-item">
-          <span className="summary-num danger">
-            {
-              items.filter((i) => {
-                const cur = i.current_stock ?? i.Stock_Quantity ?? 0;
-                const thr = i.threshold ?? i.Reorder_Level ?? 1;
-                return stockRatio(cur, thr) < 30;
-              }).length
-            }
-          </span>
+          <span className="summary-num danger">{criticalCount(items)}</span>
           <span className="summary-label">CRITICAL</span>
         </div>
         <div className="summary-divider" />
         <div className="summary-item">
-          <span className="summary-num warn">
-            {
-              items.filter((i) => {
-                const cur = i.current_stock ?? i.Stock_Quantity ?? 0;
-                const thr = i.threshold ?? i.Reorder_Level ?? 1;
-                const r = stockRatio(cur, thr);
-                return r >= 30 && r < 60;
-              }).length
-            }
-          </span>
+          <span className="summary-num warn">{warningCount(items)}</span>
           <span className="summary-label">WARNING</span>
         </div>
         <div style={{ marginLeft: "auto" }} className="summary-item">
@@ -203,60 +110,17 @@ export default function App() {
                 </tr>
               </thead>
               <tbody>
-                {items.map((item, idx) => {
-                  const sku = item.sku || item.Product_ID || idx;
-                  const name = item.name || item.Product_Name || "Unknown";
-                  const category = item.category || "Unknown";
-                  const supplier_name = item.supplier_name || "Unknown";
-                  const current =
-                    item.current_stock ?? item.Stock_Quantity ?? 0;
-                  const threshold = item.threshold ?? item.Reorder_Level ?? 0;
-                  const ratio = stockRatio(current, threshold);
-                  const isEvaluating = evaluating[sku];
-                  const urgencyClass =
-                    ratio < 30 ? "row-critical" : ratio < 60 ? "row-warn" : "";
-
-                  return (
-                    <tr
-                      key={sku}
-                      className={urgencyClass}
-                      style={{ animationDelay: `${idx * 40}ms` }}
-                    >
-                      <td className="sku-cell">{sku}</td>
-                      <td className="name-cell">{name}</td>
-                      <td className="name-cell">{category}</td>
-                      <td className="name-cell">{supplier_name}</td>
-                      <td className="stock-cell">
-                        <span
-                          className={
-                            ratio < 30 ? "danger" : ratio < 60 ? "warn" : "ok"
-                          }
-                        >
-                          {current}
-                        </span>
-                      </td>
-                      <td>{threshold}</td>
-                      <td>
-                        <StockBar current={current} threshold={threshold} />
-                      </td>
-                      <td>
-                        <button
-                          className={`evaluate-btn ${isEvaluating ? "loading" : ""}`}
-                          onClick={() => handleEvaluate(item)}
-                          disabled={isEvaluating}
-                        >
-                          {isEvaluating ? (
-                            <>
-                              Thinking <ThinkingDots />
-                            </>
-                          ) : (
-                            "Evaluate with AI"
-                          )}
-                        </button>
-                      </td>
-                    </tr>
-                  );
-                })}
+                {items.map((item, idx) => (
+                  <InventoryRow
+                    key={item.sku || item.Product_ID || idx}
+                    item={item}
+                    index={idx}
+                    isEvaluating={
+                      !!evaluating[item.sku || item.Product_ID || idx]
+                    }
+                    onEvaluate={handleEvaluate}
+                  />
+                ))}
               </tbody>
             </table>
           </div>
@@ -276,8 +140,10 @@ export default function App() {
       {cartModal && (
         <CartModal
           cart={cart}
-          onApprove={handleApproveCart}
-          onReject={handleRejectCart}
+          onApprove={(approvedCart) =>
+            handleApproveCart(approvedCart, () => setCartModal(null))
+          }
+          onReject={() => handleRejectCart(() => setCartModal(null))}
           onClose={() => setCartModal(null)}
           onError={(err) => addToast(`Error: ${err.message}`, "error")}
         />
