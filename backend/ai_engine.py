@@ -9,9 +9,11 @@ from crewai_tools import FileReadTool
 load_dotenv()
 
 # Define our model constant
-llm_model = 'openrouter/google/gemma-4-31b-it'
+llm_model = 'openrouter/meta-llama/llama-3.3-70b-instruct:nitro'
 if os.getenv("USE_GROQ") == "1":
-    llm_model = 'groq/llama-3.3-70b-versatile'
+    llm_model = 'groq/groq/compound'
+
+POLICY_PATH = 'company_policy.txt'
 
 def evaluate_inventory(item_dict, sales_list):
     """
@@ -20,7 +22,7 @@ def evaluate_inventory(item_dict, sales_list):
     """
     
     # Initialize the RAG Tool pointing exactly to our new document
-    policy_tool = FileReadTool(file_path='grocery-data/company_policy.txt')
+    policy_tool = FileReadTool(file_path=POLICY_PATH)
     
     #Define the Agents
     forecaster = Agent(
@@ -114,7 +116,7 @@ def review_basket_compliance(basket_items):
     Takes a list of items, calculates the total cost, and uses RAG to ensure 
     the basket obeys the financial policy. Auto-adjusts quantities if over budget.
     """
-    policy_tool = FileReadTool(file_path='grocery-data/company_policy.txt')
+    policy_tool = FileReadTool(file_path=POLICY_PATH)
     
     manager = Agent(
         role='Executive Supply Chain Manager',
